@@ -1,0 +1,15 @@
+$primaryColor : #9356DC;
+$secondaryColor : #FF79DA;
+$thirdColor :#99E2D0;
+
+@mixin robotoText{
+    font-family: 'roboto' sans-serif;
+}
+
+@mixin shirkhandTitle{
+    font-family : 'shirkhand' sans-serif;
+    font-weight: bold;
+}
+
+
+
