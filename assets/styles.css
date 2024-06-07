@@ -1,3 +1,24 @@
-
+.entete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete h1 {
+  text-align: center;
+  font-family: "shirkhand" sans-serif;
+  font-weight: bold;
+}
+.entete p {
+  text-align: center;
+  font-family: "roboto" sans-serif;
+}
+.entete button {
+  color: white;
+  background-color: #FF79DA;
+  border-radius: 20%;
+  padding: 20px;
+  border: solid 2px;
+}
 
 /*# sourceMappingURL=styles.css.map */

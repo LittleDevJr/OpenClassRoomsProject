@@ -9,7 +9,33 @@ $thirdColor :#99E2D0;
 @mixin shirkhandTitle{
     font-family : 'shirkhand' sans-serif;
     font-weight: bold;
-}
+    }
+
+
+.entete{
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    align-items : center;
+    h1{
+        text-align : center;
+        @include shirkhandTitle();
+    }
+        p{
+            text-align : center;
+            @include robotoText();
+        }
+        button{
+            color : white;
+            background-color : $secondaryColor;
+            border-radius : 20%;
+            padding : 20px;
+            border : solid 2px;
+        } 
+        
+    }
+
+
 
 
 
