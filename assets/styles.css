@@ -1,8 +1,25 @@
+h1,
+h2,
+h3 {
+  font-family: "shirkhand" sans-serif;
+  font-weight: bold;
+}
+
+p,
+span {
+  font-family: "roboto" sans-serif;
+}
+
 .entete {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.entete img {
+  height: 80px;
+  width: 250px;
+  margin-bottom: 30px;
 }
 .entete h1 {
   text-align: center;
@@ -19,6 +36,78 @@
   border-radius: 20%;
   padding: 20px;
   border: solid 2px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement h2 {
+  font-family: "shirkhand" sans-serif;
+  font-weight: bold;
+}
+
+.etapeNumero {
+  display: flex;
+  align-items: center;
+}
+.etapeNumero p {
+  margin-right: 10px;
+}
+.etapeNumero i {
+  margin-right: 10px;
+}
+
+.numeroStyle {
+  border: solid 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restoConteneur {
+  display: flex;
+  flex-direction: column;
+}
+.restoConteneur .flexRestoConteneur {
+  display: flex;
+  flex-direction: column;
+}
+.restoConteneur .flexRestoConteneur img {
+  margin-top: 40px;
+  border-radius: 20% 20% 0 0;
+  height: 150px;
+  width: 300px;
+}
+.restoConteneur .flexRestoConteneur .coeurEloigne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -30px;
+}
+
+.flexRestoConteneur a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerAccueil {
+  background-color: #9356DC;
+  color: white;
+}
+.footerAccueil .flexFooterAccueil {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footerAccueil span {
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

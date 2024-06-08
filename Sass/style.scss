@@ -1,3 +1,5 @@
+//Variables et mixin //
+
 $primaryColor : #9356DC;
 $secondaryColor : #FF79DA;
 $thirdColor :#99E2D0;
@@ -11,12 +13,32 @@ $thirdColor :#99E2D0;
     font-weight: bold;
     }
 
+    @mixin structureImage{
+        height : 80px;
+        width : 250px;
+        margin-bottom : 30px;
+    }
+//Global//
+    h1,
+    h2,
+    h3{
+        @include shirkhandTitle();
+    }
 
+    p,
+    span{
+        @include robotoText();
+    }
+
+//header//
 .entete{
     display : flex;
     flex-direction : column;
     justify-content : space-between;
     align-items : center;
+    img{
+        @include structureImage();
+    }
     h1{
         text-align : center;
         @include shirkhandTitle();
@@ -34,7 +56,81 @@ $thirdColor :#99E2D0;
         } 
         
     }
+    
+    //Main//
+    .fonctionnement{
+        display : flex;
+        flex-direction : column;
+        h2{
+            @include shirkhandTitle();
+        }
+    }
 
+    .etapeNumero{
+        display : flex;
+        align-items : center;
+        p{
+            margin-right : 10px;
+        }
+        i{
+            margin-right : 10px;
+        }
+    }
+
+    .numeroStyle{
+        border : solid 2px;
+        width : 20px;
+        height : 20px;
+        font-size : 12px;
+        border-radius : 50%;
+        background-color : grey;
+        color : white;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+    .restoConteneur{
+        display : flex;
+        flex-direction : column ;
+        .flexRestoConteneur{
+            display : flex;
+            flex-direction : column;
+            img{
+                margin-top : 40px;
+                border-radius : 20% 20% 0 0;
+                height : 150px;
+                width : 300px;
+            }
+            
+            .coeurEloigne{
+                display : flex;
+                align-items : center;
+                justify-content : space-between;
+                margin-top : -30px;
+            }
+        }
+    }
+
+    .flexRestoConteneur a{
+        text-decoration: none;
+        color : black;
+    }
+
+    //Footer//
+
+    .footerAccueil{
+        background-color : $primaryColor;
+        color : white;
+        .flexFooterAccueil{
+            display : flex;
+            flex-direction : column;
+            align-items : flex-start;
+        }
+        span{
+            margin-top : 50px;
+        }
+    }
 
 
 
