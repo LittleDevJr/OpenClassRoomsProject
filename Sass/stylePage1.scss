@@ -1,0 +1,118 @@
+//Variables et mixin //
+
+$primaryColor : #9356DC;
+$secondaryColor : #FF79DA;
+$thirdColor :#99E2D0;
+
+@mixin robotoText{
+    font-family: 'roboto' sans-serif;
+}
+
+@mixin shirkhandTitle{
+    font-family : 'shirkhand' sans-serif;
+    font-weight: bold;
+    }
+
+    @mixin structureImage{
+        height : 80px;
+        width : 250px;
+        margin-bottom : 30px;
+    }
+//Global//
+    h1,
+    h2,
+    h3{
+        @include shirkhandTitle();
+    }
+
+    p,
+    span{
+        @include robotoText();
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+//mediaQuery pour mobile//
+@media (max-width : 700px){
+
+.logoFleche{
+    display : flex;
+    align-items : center;
+    img{
+        object-fit: cover;
+        height : 20%;
+        width : 80%;
+    }
+    i{
+        font-size : 150%;
+        margin-right : 20px;
+    }
+}
+
+    .photoRestoPage img{
+        
+        height : 200px;
+        width : 100%;
+        margin-top : 15px;
+        position : relative;
+    }
+
+    .carteMenu{
+        background-color : white;
+        width : 100%;
+        border-radius : 5% 5% 0 0;
+        position : absolute ;
+        margin-top : -50px;
+        padding-top: 30px;
+        z-index: 1;
+        h1{
+            margin-bottom : 20px;
+            font-style: italic;
+            font-weight: 3000;
+            padding-left : 10px;
+        }
+    }
+    .entreesPlatsDesserts p{
+        margin-bottom : 20px;
+        margin-left: 5px;
+    }
+    
+    .platCompo h3{
+        padding-left : 15px;
+    }
+
+    .compoPrix{
+        display : flex;
+        justify-content: space-between;
+        p{
+            margin-left : 15px;
+        }
+    }
+    .placeBouton{
+        display: flex;
+        justify-content: center;
+    .btnEntete{
+        color : white;
+        background-color : $secondaryColor;
+        padding : 20px 40px;
+        border-radius : 39px;
+        margin-bottom: 30px;
+        margin-top : 30px;
+    }}
+
+    .footerAccueil{
+        background-color: $primaryColor;
+        color : white;
+        h3{
+            margin-bottom:10px;
+        }
+    }
+
+    .footerAccueil a{
+        text-decoration : none;
+        color : white;
+    }
+    
+}

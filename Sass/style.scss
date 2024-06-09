@@ -29,7 +29,9 @@ $thirdColor :#99E2D0;
     span{
         @include robotoText();
     }
-
+    //mediaQuery pour mobile//
+    @media (max-width : 700px){
+    
 //header//
 .entete{
     display : flex;
@@ -50,8 +52,8 @@ $thirdColor :#99E2D0;
         button{
             color : white;
             background-color : $secondaryColor;
-            border-radius : 20%;
-            padding : 20px;
+            border-radius : 39px;
+            padding : 20px 40px;
             border : solid 2px;
         } 
         
@@ -128,9 +130,10 @@ $thirdColor :#99E2D0;
             align-items : flex-start;
         }
         span{
-            margin-top : 50px;
+            margin-top : 50px; 
         }
     }
+}
 
 
 
