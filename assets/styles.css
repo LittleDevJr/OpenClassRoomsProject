@@ -1,109 +1,139 @@
 h1,
 h2,
 h3 {
-  font-family: "shirkhand" sans-serif;
+  font-family: "Shrikhand", cursive;
   font-weight: bold;
 }
 
 p,
 span {
-  font-family: "roboto" sans-serif;
+  font-family: "Roboto" sans-serif;
 }
 
 @media (max-width: 700px) {
+  header {
+    padding-bottom: 15px;
+    border-bottom: solid 1px;
+    background-color: rgb(198, 198, 164);
+  }
   .entete {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .entete img {
-    height: 80px;
-    width: 250px;
-    margin-bottom: 30px;
+    height: 20%;
+    width: 60%;
+    padding-bottom: 7px;
+    background-color: white;
+    padding-left: 30%;
+    padding-right: 30%;
   }
-  .entete h1 {
-    text-align: center;
-    font-family: "shirkhand" sans-serif;
-    font-weight: bold;
+  .entete form {
+    padding-top: 13px;
   }
-  .entete p {
-    text-align: center;
-    font-family: "roboto" sans-serif;
-  }
-  .entete button {
-    color: white;
-    background-color: #FF79DA;
-    border-radius: 20%;
-    padding: 20px;
-    border: solid 2px;
-  }
-  .fonctionnement {
+  .texteBouton {
     display: flex;
     flex-direction: column;
-  }
-  .fonctionnement h2 {
-    font-family: "shirkhand" sans-serif;
-    font-weight: bold;
-  }
-  .etapeNumero {
-    display: flex;
-    align-items: center;
-  }
-  .etapeNumero p {
-    margin-right: 10px;
-  }
-  .etapeNumero i {
-    margin-right: 10px;
-  }
-  .numeroStyle {
-    border: solid 2px;
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    border-radius: 50%;
-    background-color: grey;
-    color: white;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
-  .restoConteneur {
-    display: flex;
-    flex-direction: column;
+  .texteBouton h1 {
+    text-align: center;
   }
-  .restoConteneur .flexRestoConteneur {
-    display: flex;
-    flex-direction: column;
+  .texteBouton p {
+    text-align: center;
   }
-  .restoConteneur .flexRestoConteneur img {
-    margin-top: 40px;
-    border-radius: 20% 20% 0 0;
-    height: 150px;
-    width: 300px;
-  }
-  .restoConteneur .flexRestoConteneur .coeurEloigne {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: -30px;
-  }
-  .flexRestoConteneur a {
-    text-decoration: none;
-    color: black;
-  }
-  .footerAccueil {
-    background-color: #9356DC;
+  button {
     color: white;
+    background: linear-gradient(to bottom, #FF79DA, #FF79DA);
+    border-radius: 39px;
+    padding: 20px 40px;
   }
-  .footerAccueil .flexFooterAccueil {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footerAccueil span {
-    margin-top: 50px;
-  }
+}
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+}
+
+.etapeNumero {
+  display: flex;
+  align-items: center;
+}
+.etapeNumero p {
+  margin-right: 10px;
+}
+.etapeNumero i {
+  margin-right: 10px;
+}
+
+.numeroStyle {
+  border: solid 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundResto {
+  background-color: rgb(242, 237, 237);
+}
+
+.restoConteneur {
+  display: flex;
+  flex-direction: column;
+}
+.restoConteneur .flexRestoConteneur {
+  display: flex;
+  flex-direction: column;
+}
+.restoConteneur .flexRestoConteneur img {
+  border-radius: 20% 20% 0 0;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+.restoConteneur .flexRestoConteneur .coeurEloigne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -30px;
+}
+
+.flexRestoConteneur {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20% 20% 0 0;
+}
+.flexRestoConteneur a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerAccueil {
+  background-color: rgb(32, 31, 31);
+  color: white;
+}
+.footerAccueil .flexFooterAccueil {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footerAccueil span {
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
