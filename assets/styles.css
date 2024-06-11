@@ -2,15 +2,19 @@ h1,
 h2,
 h3 {
   font-family: "Shrikhand", cursive;
-  font-weight: bold;
 }
 
 p,
 span {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", cursive;
 }
 
-@media (max-width: 700px) {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
   header {
     padding-bottom: 15px;
     border-bottom: solid 1px;
@@ -30,110 +34,294 @@ span {
     background-color: white;
     padding-left: 30%;
     padding-right: 30%;
+    padding-top: 5%;
   }
   .entete form {
     padding-top: 13px;
   }
   .texteBouton {
+    padding-top: 5%;
+    padding-bottom: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(242, 237, 237);
   }
   .texteBouton h1 {
     text-align: center;
+    font-family: "Roboto", cursive;
+    padding-bottom: 3%;
   }
   .texteBouton p {
     text-align: center;
+    padding-bottom: 5%;
   }
   button {
     color: white;
-    background: linear-gradient(to bottom, #FF79DA, #FF79DA);
+    background: linear-gradient(to bottom, #FF79DA, #dc76bf);
     border-radius: 39px;
     padding: 20px 40px;
+    border-width: 0;
+  }
+  .fonctionnement {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement h2 {
+    font-family: "Roboto", cursive;
+    margin-bottom: 30px;
+  }
+  .etapeNumero {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-radius: 39px;
+    background-color: rgb(242, 237, 237);
+  }
+  .etapeNumero p {
+    margin-right: 10px;
+  }
+  .etapeNumero i {
+    margin-right: 10px;
+    color: darkviolet;
+  }
+  .numeroStyle {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: darkviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .backgroundResto {
+    background-color: rgb(242, 237, 237);
+    padding-bottom: 30px;
+    margin-top: 30px;
+  }
+  .backgroundResto h2 {
+    font-family: "Roboto", cursive;
+    padding-left: 5%;
+  }
+  .restoConteneur {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .restoConteneur .flexRestoConteneur {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .restoConteneur .flexRestoConteneur img {
+    border-radius: 10% 10% 0% 0%;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .restoConteneur .flexRestoConteneur h3 {
+    font-family: "Roboto", cursive;
+  }
+  .restoConteneur .flexRestoConteneur .coeurEloigne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .etiquetteNouveau {
+    position: relative;
+    display: inline-block;
+  }
+  .etiquetteNouveau::after {
+    content: "Nouveau";
+    width: 63px;
+    height: 20px;
+    color: green;
+    background-color: lightgreen;
+    right: 5%;
+    bottom: 80%;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+  }
+  .flexRestoConteneur {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10% 10% 10% 10%;
+  }
+  .flexRestoConteneur a {
+    text-decoration: none;
+    color: black;
+  }
+  .footerAccueil {
+    padding-left: 5%;
+    background-color: darkslategrey;
+    color: white;
+  }
+  .footerAccueil .flexFooterAccueil {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+  }
+  .flexIconeTexte {
+    margin-bottom: 6px;
   }
 }
-.fonctionnement {
-  display: flex;
-  flex-direction: column;
-}
-.fonctionnement h2 {
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
-}
-
-.etapeNumero {
-  display: flex;
-  align-items: center;
-}
-.etapeNumero p {
-  margin-right: 10px;
-}
-.etapeNumero i {
-  margin-right: 10px;
-}
-
-.numeroStyle {
-  border: solid 2px;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  border-radius: 50%;
-  background-color: grey;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.backgroundResto {
-  background-color: rgb(242, 237, 237);
-}
-
-.restoConteneur {
-  display: flex;
-  flex-direction: column;
-}
-.restoConteneur .flexRestoConteneur {
-  display: flex;
-  flex-direction: column;
-}
-.restoConteneur .flexRestoConteneur img {
-  border-radius: 20% 20% 0 0;
-  height: 150px;
-  width: 100%;
-  object-fit: cover;
-}
-.restoConteneur .flexRestoConteneur .coeurEloigne {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: -30px;
-}
-
-.flexRestoConteneur {
-  width: 90%;
-  margin-left: 5%;
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 20% 20% 0 0;
-}
-.flexRestoConteneur a {
-  text-decoration: none;
-  color: black;
-}
-
-.footerAccueil {
-  background-color: rgb(32, 31, 31);
-  color: white;
-}
-.footerAccueil .flexFooterAccueil {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footerAccueil span {
-  margin-top: 50px;
+@media (max-width: 1024px) and (min-width: 768px) {
+  header {
+    width: 100%;
+    border: solid 2px;
+  }
+  .entete {
+    text-align: center;
+    border: solid 2px;
+    width: 100%;
+  }
+  .entete form {
+    padding: 25px 0;
+  }
+  .entete img {
+    width: 30%;
+  }
+  .texteBouton {
+    width: 100%;
+    border: solid 2px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .texteBouton h1 {
+    padding-bottom: 25px;
+    font-family: "Roboto", cursive;
+  }
+  .texteBouton p {
+    padding-bottom: 15px;
+  }
+  .btnEntete {
+    width: 200px;
+    height: 50px;
+    border-radius: 39px;
+    background-color: #FF79DA;
+    color: white;
+  }
+  .fonctionnement {
+    padding-bottom: 20px;
+    border: solid 2px;
+  }
+  .fonctionnement h2 {
+    font-family: "Roboto", cursive;
+    padding-bottom: 10px;
+  }
+  .etapeFonctionnement {
+    display: flex;
+    justify-content: space-between;
+  }
+  .etapeNumero {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-radius: 39px;
+    background-color: rgb(242, 237, 237);
+  }
+  .etapeNumero p {
+    margin-right: 10px;
+  }
+  .etapeNumero i {
+    margin-right: 10px;
+    color: darkviolet;
+  }
+  .numeroStyle {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: darkviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .backgroundResto {
+    background-color: rgb(242, 237, 237);
+    padding-bottom: 30px;
+    margin-top: 30px;
+  }
+  .backgroundResto h2 {
+    font-family: "Roboto", cursive;
+    padding-left: 5%;
+  }
+  .backgroundResto {
+    background-color: rgb(242, 237, 237);
+    padding-bottom: 30px;
+    margin-top: 30px;
+  }
+  .backgroundResto h2 {
+    font-family: "Roboto", cursive;
+    padding-left: 5%;
+  }
+  .restoConteneur {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restoConteneur .flexRestoConteneur {
+    padding-bottom: 15px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  .restoConteneur .flexRestoConteneur img {
+    border-radius: 10% 10% 0% 0%;
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+  }
+  .restoConteneur .flexRestoConteneur h3 {
+    font-family: "Roboto", cursive;
+  }
+  .restoConteneur .flexRestoConteneur .coeurEloigne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .restoConteneur .etiquetteNouveau {
+    position: relative;
+    display: inline-block;
+  }
+  .restoConteneur .etiquetteNouveau::after {
+    content: "Nouveau";
+    width: 63px;
+    height: 20px;
+    color: green;
+    background-color: lightgreen;
+    right: 5%;
+    bottom: 75%;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+  }
+  .flexRestoConteneur {
+    margin-left: 5%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10% 10% 10% 10%;
+  }
+  .flexRestoConteneur a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

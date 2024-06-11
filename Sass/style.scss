@@ -5,19 +5,14 @@ $secondaryColor : #FF79DA;
 $thirdColor :rgb(242, 237, 237);
 
 @mixin robotoText{
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', cursive;
 }
 
 @mixin shirkhandTitle{
     font-family : 'Shrikhand', cursive;
-    font-weight: bold;
     }
 
-    @mixin structureImage{
-        height : 80px;
-        width : 250px;
-        margin-bottom : 30px;
-    }
+    
 //Global//
     h1,
     h2,
@@ -29,8 +24,13 @@ $thirdColor :rgb(242, 237, 237);
     span{
         @include robotoText();
     }
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
     //mediaQuery pour mobile//
-    @media (max-width : 700px){
+    @media (max-width : 767.98px){
     
 //header//
 
@@ -53,6 +53,7 @@ header{
         background-color: white;
         padding-left: 30%;
         padding-right : 30%;
+        padding-top: 5%;
     }
     form{
         padding-top: 13px;
@@ -63,54 +64,68 @@ header{
             
 
     .texteBouton{
+        padding-top : 5%;
+        padding-bottom: 20%;
         display : flex;
         flex-direction : column;
         justify-content: center;
         align-items: center;
+        background-color: $thirdColor;
         h1{
             text-align: center;
+            @include robotoText();
+            padding-bottom : 3%;
         }
         p{
             text-align: center;
+            padding-bottom: 5%;
         }
     }
 
         button{
             color : white;
-            background: linear-gradient(to bottom, #FF79DA, #FF79DA);
+            background: linear-gradient(to bottom, #FF79DA, #dc76bf);
             border-radius : 39px;
             padding : 20px 40px;
+            border-width: 0;
         } 
         
-    }
+    
     
     //Main//
     .fonctionnement{
+        padding-left : 5%;
+        padding-right : 5%;
         display : flex;
         flex-direction : column;
         h2{
-            @include shirkhandTitle();
+            @include robotoText();
+            margin-bottom: 30px;
         }
     }
 
     .etapeNumero{
         display : flex;
         align-items : center;
+        padding: 15px 0;
+        margin-bottom: 30px;
+        border-radius: 39px;
+        background-color: $thirdColor;
         p{
             margin-right : 10px;
         }
         i{
             margin-right : 10px;
+            color: darkviolet;
         }
     }
 
     .numeroStyle{
-        border : solid 2px;
         width : 20px;
         height : 20px;
         font-size : 12px;
         border-radius : 50%;
-        background-color : grey;
+        background-color : darkviolet;
         color : white;
         display : flex;
         justify-content : center;
@@ -119,28 +134,57 @@ header{
 
     .backgroundResto{
         background-color: $thirdColor;
+        padding-bottom: 30px;
+        margin-top: 30px;
+        h2{
+            @include robotoText();
+            padding-left: 5%;
+        }
     }
 
     .restoConteneur{
+        margin-top: 15px;
         display : flex;
         flex-direction : column ;
         .flexRestoConteneur{
+            padding-bottom: 10px;
             display : flex;
             flex-direction : column;
             img{
-                border-radius : 20% 20% 0 0;
+                border-radius : 10% 10% 0% 0%;
                 height : 150px;
                 width : 100%;
                 object-fit: cover;
+            }
+            h3{
+                @include robotoText();
             }
             
             .coeurEloigne{
                 display : flex;
                 align-items : center;
                 justify-content : space-between;
-                margin-top : -30px;
+                margin-top : 0;
             }
         }
+    }
+    
+    .etiquetteNouveau{
+        position: relative;
+        display: inline-block;
+    }
+    .etiquetteNouveau::after{
+        content: "Nouveau";
+        width: 63px;
+        height: 20px;
+        color: green;
+        background-color: lightgreen;
+        right : 5%;
+        bottom: 80%;
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px;
+        position : absolute;
     }
 
     .flexRestoConteneur{
@@ -148,7 +192,7 @@ header{
         margin-left : 5%;
         margin-bottom: 20px;
         background-color: white;
-        border-radius : 20% 20% 0 0;
+        border-radius : 10% 10% 10% 10%;
         a{
         text-decoration: none;
         color : black;
@@ -158,18 +202,187 @@ header{
     //Footer//
 
     .footerAccueil{
-        background-color : $primaryColor;
+        padding-left: 5%;
+        background-color : darkslategrey;
         color : white;
         .flexFooterAccueil{
+            padding-top: 10px;
             display : flex;
             flex-direction : column;
-            align-items : flex-start;
-        }
-        span{
-            margin-top : 50px; 
+            align-items : space-between;
         }
     }
+        .flexIconeTexte{
+            margin-bottom: 6px;
+        } 
+    }
+     //Mediaquery pour Tablettes //
+    @media (max-width: 1024px) and (min-width: 768px) {
 
+        header{
+            width : 100%;
+            border: solid 2px;
+        }
+
+        .entete{
+            text-align: center;
+            border : solid 2px;
+            width: 100%;
+            form{
+                padding : 25px 0;
+            }
+            img{
+                width : 30%;
+            }
+        }
+
+        .texteBouton{
+            width : 100%;
+            border : solid 2px;
+            text-align: center;
+            padding-bottom : 20px;
+            h1{
+                padding-bottom: 25px;
+                @include robotoText();
+            }
+            p{
+                padding-bottom: 15px;
+            }
+        }
+
+        .btnEntete{
+            width : 200px;
+            height : 50px;
+            border-radius : 39px;
+            background-color: $secondaryColor;
+            color: white;
+        }
+
+        .fonctionnement{
+            padding-bottom: 20px;
+            border : solid 2px;
+            h2{
+                @include robotoText();
+                padding-bottom: 10px;
+            }     
+        }
+
+        .etapeFonctionnement{
+            display : flex;
+            justify-content : space-between;
+        }
+
+        .etapeNumero{
+            display : flex;
+            align-items : center;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-radius: 39px;
+            background-color: $thirdColor;
+            p{
+                margin-right : 10px;
+            }
+            i{
+                margin-right : 10px;
+                color: darkviolet;
+            }
+        }
+
+        .numeroStyle{
+            width : 20px;
+            height : 20px;
+            font-size : 12px;
+            border-radius : 50%;
+            background-color : darkviolet;
+            color : white;
+            display : flex;
+            justify-content : center;
+            align-items : center;
+        }
+    
+        .backgroundResto{
+            background-color: $thirdColor;
+            padding-bottom: 30px;
+            margin-top: 30px;
+            h2{
+                @include robotoText();
+                padding-left: 5%;
+            }}
+        
+            .backgroundResto{
+                background-color: $thirdColor;
+                padding-bottom: 30px;
+                margin-top: 30px;
+                h2{
+                    @include robotoText();
+                    padding-left: 5%;
+                }
+            }
+        
+            .restoConteneur{
+                margin-top: 15px;
+                display : flex;
+                flex-wrap: wrap;
+                .flexRestoConteneur{
+                    padding-bottom: 15px;
+                    margin-right : 25px;
+                    display : flex;
+                    flex-direction : column;
+                    img{
+                        border-radius : 10% 10% 0% 0%;
+                        height : 150px;
+                        width : 250px;
+                        object-fit: cover;
+                    }
+                    h3{
+                        @include robotoText();
+                    }
+                    
+                    .coeurEloigne{
+                        display : flex;
+                        align-items : center;
+                        justify-content : space-between;
+                        margin-top : 0;
+                    }
+                }
+
+                .etiquetteNouveau{
+                    position: relative;
+                    display: inline-block;
+                }
+                .etiquetteNouveau::after{
+                    content: "Nouveau";
+                    width: 63px;
+                    height: 20px;
+                    color: green;
+                    background-color: lightgreen;
+                    right : 5%;
+                    bottom: 75%;
+                    display: block;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    position : absolute;
+                }
+            }
+            .flexRestoConteneur{
+                
+                margin-left : 5%;
+                margin-bottom: 20px;
+                background-color: white;
+                border-radius : 10% 10% 10% 10%;
+                a{
+                text-decoration: none;
+                color : black;
+            }
+        }
+    
+
+        
+
+        
+
+    
+}
 
 
 
