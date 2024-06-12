@@ -31,6 +31,7 @@ main {
     height: 20%;
     width: 60%;
     background-color: rgb(242, 237, 237);
+    padding-left: 20%;
   }
   .logoFleche i {
     font-size: 150%;
@@ -74,6 +75,11 @@ main {
   .entreesPlatsDesserts p {
     margin-bottom: 20px;
     margin-left: 5px;
+  }
+  .ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .platCompo {
     margin-bottom: 20px;

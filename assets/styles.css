@@ -180,11 +180,10 @@ span {
 @media (max-width: 1024px) and (min-width: 768px) {
   header {
     width: 100%;
-    border: solid 2px;
+    background-color: rgb(198, 198, 164);
   }
   .entete {
     text-align: center;
-    border: solid 2px;
     width: 100%;
   }
   .entete form {
@@ -192,10 +191,12 @@ span {
   }
   .entete img {
     width: 30%;
+    background-color: white;
+    padding: 0 35%;
   }
   .texteBouton {
     width: 100%;
-    border: solid 2px;
+    background-color: rgb(242, 237, 237);
     text-align: center;
     padding-bottom: 20px;
   }
@@ -215,7 +216,8 @@ span {
   }
   .fonctionnement {
     padding-bottom: 20px;
-    border: solid 2px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .fonctionnement h2 {
     font-family: "Roboto", cursive;
@@ -239,6 +241,10 @@ span {
   .etapeNumero i {
     margin-right: 10px;
     color: darkviolet;
+  }
+  .etapeNumero span {
+    font-size: 0.8rem;
+    padding-right: 8px;
   }
   .numeroStyle {
     width: 20px;
@@ -283,7 +289,7 @@ span {
   .restoConteneur .flexRestoConteneur img {
     border-radius: 10% 10% 0% 0%;
     height: 150px;
-    width: 250px;
+    width: 100%;
     object-fit: cover;
   }
   .restoConteneur .flexRestoConteneur h3 {
@@ -313,6 +319,7 @@ span {
     position: absolute;
   }
   .flexRestoConteneur {
+    width: 40%;
     margin-left: 5%;
     margin-bottom: 20px;
     background-color: white;
@@ -321,6 +328,28 @@ span {
   .flexRestoConteneur a {
     text-decoration: none;
     color: black;
+  }
+  .footerAccueil {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    background-color: darkslategrey;
+    color: white;
+  }
+  .footerAccueil h3 {
+    margin-left: 85%;
+    margin-bottom: -30px;
+    font-size: 0.8rem;
+  }
+  .footerAccueil .flexFooterAccueil {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .flexIconeTexte {
+    margin-bottom: 6px;
+    margin-left: 10px;
+    font-size: 0.8rem;
   }
 }
 

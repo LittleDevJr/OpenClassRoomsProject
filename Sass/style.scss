@@ -221,24 +221,25 @@ header{
 
         header{
             width : 100%;
-            border: solid 2px;
+            background-color: rgb(198, 198, 164);
         }
 
         .entete{
             text-align: center;
-            border : solid 2px;
             width: 100%;
             form{
                 padding : 25px 0;
             }
             img{
                 width : 30%;
+                background-color: white;
+                padding: 0 35%;
             }
         }
 
         .texteBouton{
             width : 100%;
-            border : solid 2px;
+            background-color: $thirdColor;
             text-align: center;
             padding-bottom : 20px;
             h1{
@@ -260,7 +261,8 @@ header{
 
         .fonctionnement{
             padding-bottom: 20px;
-            border : solid 2px;
+            margin-left : 5%;
+            margin-right : 5%;
             h2{
                 @include robotoText();
                 padding-bottom: 10px;
@@ -285,6 +287,10 @@ header{
             i{
                 margin-right : 10px;
                 color: darkviolet;
+            }
+            span{
+                font-size: 0.8rem;
+                padding-right : 8px;
             }
         }
 
@@ -331,7 +337,7 @@ header{
                     img{
                         border-radius : 10% 10% 0% 0%;
                         height : 150px;
-                        width : 250px;
+                        width : 100%;
                         object-fit: cover;
                     }
                     h3{
@@ -364,8 +370,8 @@ header{
                     position : absolute;
                 }
             }
-            .flexRestoConteneur{
-                
+            .flexRestoConteneur{ 
+                width : 40%;
                 margin-left : 5%;
                 margin-bottom: 20px;
                 background-color: white;
@@ -375,6 +381,29 @@ header{
                 color : black;
             }
         }
+
+        .footerAccueil{
+            padding-top : 30px;
+            padding-bottom : 30px;
+            padding-left: 5%;
+            background-color : darkslategrey;
+            color : white;
+            h3{
+                margin-left : 85%;
+                margin-bottom : -30px;
+                font-size : 0.8rem;
+            }
+            .flexFooterAccueil{
+                padding-top: 10px;
+                display : flex;
+                justify-content : center;
+            }
+        }
+            .flexIconeTexte{
+                margin-bottom: 6px;
+                margin-left : 10px;
+                font-size : 0.8rem;
+            } 
     
 
         
