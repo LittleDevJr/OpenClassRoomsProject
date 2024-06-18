@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class="logoFleche">
-            <a href="../index.html"></a>
-            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            <a href="../index.html">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i></a>
             <img src="../assets/Images-et-textes-Ohmyfood/images/logo/ohmyfood.png" alt="logo">
         </div>
         </header>
@@ -25,33 +25,56 @@
         <section class="carteMenu">
             <div class="restoCoeur">
             <h1>La Note Enchantée</h1>
-            <i class="far fa-heart"></i>
+            <div class="coeur">
+                <i class="far fa-heart coeurVide"></i>
+                <i class="fas fa-heart coeurPlein"></i>
+                </div>
             </div>
             <article class="entreesPlatsDesserts">
                 <p>ENTREES</p>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3 class="ellipse">Ravioles de foie gras</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse" >Accompagnées de leur crème à la truffe</p>
                         <p>25€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3>Caviar osciètre</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Sur blini à la farine de blé noire</p>
                         <p>35€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3 class="ellipse">Homard et espuma de potiron</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Marinés aux zestes d'orange</p>
                         <p>20€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3 class="ellipse">Foie gras de canard cuit entier</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Confiture de figue et pain toasté</p>
                         <p>35€</p>
@@ -61,21 +84,36 @@
             <article class="entreesPlatsDesserts">
                 <p>PLATS</p>
                 <div class="platCompo">
-                    <h3 class="ellipse">Noix de coquilles Saint Jacques</h3>
+                    <div class="platCoche">
+                    <h3 class="ellipse">Noix de Saint Jacques</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Sur lit de purée de céleri-rave</p>
                         <p>35€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3>Langoustine poêlée</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p>Purée de patate douce</p>
                         <p>35€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3 class="ellipse">Mijoté de queue de boeuf</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Et riz sauvage aux zestes de citron</p>
                         <p>45€</p>
@@ -85,21 +123,36 @@
             <article class="entreesPlatsDesserts">
                 <p>DESSERTS</p>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3>Macaron noisette et chocolat</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p class="ellipse">Glace au caramel brun et sel de Guérandes</p>
                         <p>18€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3>Baba au rhum revisité</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p>Avec son coulis de citron</p>
                         <p>22€</p>
                    </div> 
                 </div>
                 <div class="platCompo">
+                    <div class="platCoche">
                     <h3>Tarte au citron meringuée</h3>
+                    <div class="coche">
+                        <input type="checkbox">
+                        </div>
+                    </div>
                     <div class="compoPrix">
                         <p>Destructurée</p>
                         <p>22€</p>
@@ -108,8 +161,11 @@
                 </article>
                 <div class="placeBouton">
                 <button class="btnEntete">Commander</button>
-                </div>   
-                <div class="footerAccueil">
+                </div> 
+                </section>
+                </main>
+                <footer>  
+                <div class="footerAccueil footerPage2">
                     <h3><i>Ohmyfood</i></h3>
                     <div class="flexFooterAccueil">
                         <article class="flexIconeTexte">
@@ -124,20 +180,19 @@
                             <span>Devenir partenaire</span>
                             </a>
                         </article>
-                        <article>
+                        <article class="flexIconeTexte">
                             <a href="#">
                         <span>Mentions légales</span>
                         </a>
                         </article>
-                        <article>
-                            <a href="#">
+                        <article class="flexIconeTexte">
+                            <a href="mailto:contact@ohmyfood.com">
                         <span>Contact</span>
                         </a>
                         </article>
                     </div>
                 </div>
-            </section>
-            </main>
+            </footer>
             
     
 </body>
