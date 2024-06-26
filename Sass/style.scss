@@ -1,8 +1,8 @@
 //Variables et mixin //
 
 $primaryColor : rgb(32, 31, 31);
-$secondaryColor : #FF79DA;
-$thirdColor :rgb(242, 237, 237);
+$secondaryColor : #e7e7e7;
+$thirdColor :#f2f2f2;
 
 @mixin robotoText{
     font-family: 'Roboto', cursive;
@@ -29,6 +29,7 @@ $thirdColor :rgb(242, 237, 237);
         padding: 0;
         margin: 0;
     }
+    
     //mediaQuery pour mobile//
     @media (max-width : 767.98px){
     
@@ -37,7 +38,7 @@ $thirdColor :rgb(242, 237, 237);
 header{
     padding-bottom : 15px;
     border-bottom: solid 1px;
-    background-color: rgb(198, 198, 164);
+    background-color: $secondaryColor;
 }
 
 .entete{
@@ -60,12 +61,22 @@ header{
     }
 }
 
-
-            
+    .rechercheEntete{
+        background-color : $secondaryColor;
+        input{
+            background-color : $secondaryColor;
+            border : none;
+            padding-left : 30px;
+            &::placeholder{
+                font-weight: bold;
+                color : black;
+            }
+        }
+    }        
 
     .texteBouton{
         padding-top : 5%;
-        padding-bottom: 20%;
+        padding-bottom: 20px;
         display : flex;
         flex-direction : column;
         justify-content: center;
@@ -84,18 +95,23 @@ header{
 
         button{
             color : white;
-            background: linear-gradient(to bottom, #FF79DA, #dc76bf);
             border-radius : 39px;
             padding : 20px 40px;
             border-width: 0;
+            color : white;
+            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+            cursor : pointer ;
+            transition: background 0.3s ease;
+            &:hover{
+                background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
+            }
         } 
         
     
     
     //Main//
     .fonctionnement{
-        padding-left : 5%;
-        padding-right : 5%;
+        padding : 20px 5%;
         display : flex;
         flex-direction : column;
         h2{
@@ -107,9 +123,9 @@ header{
     .etapeNumero{
         display : flex;
         align-items : center;
-        padding: 15px 0;
+        padding: 15px 15px 15px 0;
         margin-bottom: 30px;
-        border-radius: 39px;
+        border-radius: 15px;
         background-color: $thirdColor;
         p{
             margin-right : 10px;
@@ -130,15 +146,16 @@ header{
         display : flex;
         justify-content : center;
         align-items : center;
+        margin-left : -5px;
     }
 
     .backgroundResto{
         background-color: $thirdColor;
-        padding-bottom: 30px;
-        margin-top: 30px;
+        padding : 20px;
         h2{
             @include robotoText();
             padding-left: 5%;
+            padding-bottom : 20px;
         }
     }
 
@@ -151,13 +168,14 @@ header{
             display : flex;
             flex-direction : column;
             img{
-                border-radius : 10% 10% 0% 0%;
+                border-radius : 10px 10px 0% 0%;
                 height : 150px;
                 width : 100%;
                 object-fit: cover;
             }
             h3{
                 @include robotoText();
+                padding-left : 10px;
             }
             
             .coeurEloigne{
@@ -165,7 +183,39 @@ header{
                 align-items : center;
                 justify-content : space-between;
                 margin-top : 0;
+                p{
+                    padding-left : 10px;
+                }
             }
+        }
+    }
+
+    .coeur{
+        position : relative;
+        height : 30px;
+        width : 30px;
+    }
+
+    .coeurPlein, .coeurVide{
+        position : absolute;
+        font-size : 25px;
+        margin-top : -5px;
+        transition : opacity 3s ease;
+    }
+
+    .coeurVide{
+        opacity : 1;
+        color : black;
+        &:hover{
+            opacity : 0;
+        }
+    }
+
+    .coeurPlein{
+        opacity : 0;
+        color : rgb(166, 61, 166);
+        &:hover{
+            opacity: 1;
         }
     }
     
@@ -177,14 +227,15 @@ header{
         content: "Nouveau";
         width: 63px;
         height: 20px;
-        color: green;
-        background-color: lightgreen;
+        color: rgb(17, 133, 92);
+        background-color: rgba(153, 244, 192, 0.985);
         right : 5%;
         bottom: 80%;
         display: block;
         padding-left: 5px;
         padding-right: 5px;
         position : absolute;
+        border-radius : 5px;
     }
 
     .flexRestoConteneur{
@@ -192,7 +243,7 @@ header{
         margin-left : 5%;
         margin-bottom: 20px;
         background-color: white;
-        border-radius : 10% 10% 10% 10%;
+        border-radius : 10px 10px 10% 10%;
         a{
         text-decoration: none;
         color : black;
@@ -203,8 +254,11 @@ header{
 
     .footerAccueil{
         padding-left: 5%;
-        background-color : darkslategrey;
+        background-color : rgb(64, 63, 63);
         color : white;
+        h3{
+            padding-top : 6px;
+        }
         .flexFooterAccueil{
             padding-top: 10px;
             display : flex;
@@ -215,33 +269,115 @@ header{
         .flexIconeTexte{
             margin-bottom: 6px;
         } 
+
+        
+        @keyframes loaderAnimation {
+            0% {
+              transform: translateY(0);
+            }
+            30% {
+                transform: translateY(200px);
+            }
+            100% {
+              transform:  translateY(0px);
+            }
+          }
+          
+          @keyframes cacher {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+          
+          @keyframes roule {
+            0% {
+              transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(0deg);
+            }
+            22% {
+                transform : rotate(10800deg);
+            }
+            100% {
+              transform: rotate(108000deg); 
+            }
+          }
+          
+    
+          
+          #loader-position {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 9999;
+            animation: cacher 1s ease 4s forwards;
+          }
+          
+          .loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Shirkhand', cursive;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: 40px;
+            animation: loaderAnimation 5s ease-in;
+          }
+          
+          .tourneAnime {
+            animation: roule 7s ease-in;
+          }
     }
      //Mediaquery pour Tablettes //
     @media (max-width: 1440px) and (min-width: 768px) {
 
         header{
             width : 100%;
-            background-color: rgb(198, 198, 164);
+            background-color: $secondaryColor;
         }
 
         .entete{
             text-align: center;
             width: 100%;
             form{
-                padding : 25px 0;
+                padding : 15px 50px;
             }
             img{
-                width : 30%;
+                width : 190px;
+                height : 40px;
                 background-color: white;
-                padding: 0 35%;
+                padding: 10px 50% 10px 43%;
+                
             }
         }
+
+        .rechercheEntete input{
+            background-color : $secondaryColor;
+            border : none;
+            padding-left : 30px;
+            &::placeholder{
+                font-weight: bold;
+                color : black;
+            }
+        }
+        
 
         .texteBouton{
             width : 100%;
             background-color: $thirdColor;
             text-align: center;
-            padding-bottom : 20px;
+            padding : 10px 0 20px 0;
             h1{
                 padding-bottom: 25px;
                 @include robotoText();
@@ -252,17 +388,22 @@ header{
         }
 
         .btnEntete{
-            width : 200px;
-            height : 50px;
+            width : 250px;
+            color : white;
+            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+            padding : 20px 30px;
             border-radius : 39px;
-            background-color: $secondaryColor;
-            color: white;
+            border-width: 0;
+            cursor : pointer ;
+            transition: background 0.3s ease;
+            &:hover{
+                background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+            }
         }
 
         .fonctionnement{
-            padding-bottom: 20px;
-            margin-left : 5%;
-            margin-right : 5%;
+            padding: 20px 5%;
+            
             h2{
                 @include robotoText();
                 padding-bottom: 10px;
@@ -277,12 +418,13 @@ header{
         .etapeNumero{
             display : flex;
             align-items : center;
-            padding: 15px 0;
+            padding: 15px 15px 15px 0px;
             margin-bottom: 30px;
-            border-radius: 39px;
+            border-radius: 15px;
             background-color: $thirdColor;
             p{
-                margin-right : 10px;
+                margin-right : 15px;
+                margin-left : -5px;
             }
             i{
                 margin-right : 10px;
@@ -290,6 +432,7 @@ header{
             }
             span{
                 font-size: 0.8rem;
+                font-weight : bold;
                 padding-right : 8px;
             }
         }
@@ -313,17 +456,10 @@ header{
             h2{
                 @include robotoText();
                 padding-left: 5%;
+                padding-bottom : 20px;
             }}
         
-            .backgroundResto{
-                background-color: $thirdColor;
-                padding-bottom: 30px;
-                margin-top: 30px;
-                h2{
-                    @include robotoText();
-                    padding-left: 5%;
-                }
-            }
+            
         
             .restoConteneur{
                 margin-top: 15px;
@@ -335,13 +471,14 @@ header{
                     display : flex;
                     flex-direction : column;
                     img{
-                        border-radius : 10% 10% 0% 0%;
+                        border-radius : 10px 10px 0% 0%;
                         height : 150px;
                         width : 100%;
                         object-fit: cover;
                     }
                     h3{
                         @include robotoText();
+                        padding-left : 10px;
                     }
                     
                     .coeurEloigne{
@@ -349,6 +486,38 @@ header{
                         align-items : center;
                         justify-content : space-between;
                         margin-top : 0;
+                        p{
+                            padding-left : 10px;
+                        }
+                    }
+                }
+
+                .coeur{
+                    position : relative;
+                    height : 30px;
+                    width : 30px;
+                }
+        
+                .coeurPlein, .coeurVide{
+                    position : absolute;
+                    font-size : 25px;
+                    margin-top : -5px;
+                    transition : opacity 3s ease;
+                }
+        
+                .coeurVide{
+                    opacity : 1;
+                    color : black;
+                    &:hover{
+                        opacity : 0;
+                    }
+                }
+        
+                .coeurPlein{
+                    opacity : 0;
+                    color : rgb(166, 61, 166);
+                    &:hover{
+                        opacity: 1;
                     }
                 }
 
@@ -360,14 +529,14 @@ header{
                     content: "Nouveau";
                     width: 63px;
                     height: 20px;
-                    color: green;
-                    background-color: lightgreen;
+                    color: rgb(17, 133, 92);
+                    background-color: rgba(153, 244, 192, 0.985);
                     right : 5%;
                     bottom: 75%;
                     display: block;
-                    padding-left: 5px;
-                    padding-right: 5px;
+                    padding : 5px;
                     position : absolute;
+                    border-radius : 5px;
                 }
             }
             .flexRestoConteneur{ 
@@ -386,7 +555,7 @@ header{
             padding-top : 30px;
             padding-bottom : 30px;
             padding-left: 5%;
-            background-color : darkslategrey;
+            background-color : rgb(64, 63, 63);
             color : white;
             h3{
                 margin-left : 85%;
@@ -404,8 +573,75 @@ header{
                 margin-left : 10px;
                 font-size : 0.8rem;
             } 
-    
 
+            .espaceFlexIcone{
+                padding-left: 25px;
+            }
+        
+
+        
+            @keyframes loaderAnimation {
+                0% {
+                  transform: translateX(0%);
+                }
+                30%{
+                    transform : translateX(0%)
+                }
+                100% {
+                  transform:  translateX(500%);
+                }
+              }
+              
+              @keyframes cacher {
+                0% {
+                  opacity: 1;
+                }
+                100% {
+                  opacity: 0;
+                  visibility: hidden;
+                }
+              }
+              
+              @keyframes roule {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(21600deg); 
+                }
+              }
+              
+        
+              
+              #loader-position {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                z-index: 9999;
+                animation: cacher 1s ease 4s forwards;
+              }
+              
+              .loader {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Shirkhand', cursive;
+                font-weight: bolder;
+                font-style: italic;
+                font-size: 120px;
+                animation: loaderAnimation 5s ease-in;
+              }
+              
+              .tourneAnime {
+                animation: roule 5s ease-in;
+              }
+            
         
 
         
