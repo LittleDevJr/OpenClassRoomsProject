@@ -19,15 +19,6 @@ main {
   background-color: rgb(242, 237, 237);
 }
 
-.coeurPlein {
-  font-size: 30px;
-  transition: color 3s;
-}
-.coeurPlein:hover {
-  color: red;
-  cursor: pointer;
-}
-
 @media (max-width: 700px) {
   .logoFleche {
     display: flex;
@@ -43,9 +34,13 @@ main {
     padding-left: 20%;
   }
   .logoFleche i {
+    padding-left: 10px;
     font-size: 150%;
     margin-right: 20px;
     background-color: rgb(242, 237, 237);
+  }
+  .logoFleche i:hover {
+    cursor: pointer;
   }
   .photoRestoPage img {
     height: 200px;
@@ -92,7 +87,7 @@ main {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
-    transition: opacity 3s ease;
+    transition: opacity 1500ms ease;
   }
   .coeurVide {
     opacity: 1;
@@ -100,6 +95,7 @@ main {
   }
   .coeurVide:hover {
     opacity: 0;
+    cursor: pointer;
   }
   .coeurPlein {
     opacity: 0;
@@ -107,6 +103,7 @@ main {
   }
   .coeurPlein:hover {
     opacity: 1;
+    cursor: pointer;
   }
   .entreesPlatsDesserts p {
     margin-bottom: 20px;
@@ -114,10 +111,12 @@ main {
   }
   .ecartPrix {
     padding-right: 10px;
+    transition: transform 1s;
   }
   .assemblage {
     display: flex;
     align-items: center;
+    margin-top: 30px;
   }
   .entreesPlatsDesserts .under {
     border-bottom: solid 1px;
@@ -135,28 +134,50 @@ main {
   .platCoche {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
-  .platCoche:hover input {
-    transform: translateX(0%);
-    opacity: 1;
+  .platCompo {
+    position: relative;
   }
-  input {
-    height: 19px;
-    width: 19px;
-    margin-left: 10px;
-    transform: translateX(2000%);
+  .coche {
+    border-radius: 0 14px 14px 0;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s, opacity 1s, visibility 1s;
     opacity: 0;
-    transition: transform 2s ease-in-out, opacity 1200ms ease-in-out;
+    visibility: hidden;
+  }
+  .platCompo:hover .coche {
+    transform: scaleX(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .platCompo:hover .ecartPrix {
+    transform: translateX(-35px);
+  }
+  .coche input[type=checkbox] {
+    height: 50%;
+    width: 50%;
   }
   .platCompo {
     margin-bottom: 20px;
-    height: 50px;
+    height: 60px;
     width: 95%;
     margin-left: 7px;
-    border-radius: 5% 5% 5% 5%;
+    border-radius: 15px;
     background-color: white;
   }
   .platCompo h3 {
+    padding-top: 5px;
     padding-left: 15px;
     text-overflow: ellipsis;
   }
@@ -167,6 +188,14 @@ main {
   .compoPrix p {
     margin-left: 15px;
     padding-bottom: 0px;
+  }
+  @keyframes apparaitre {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .un,
   .deux,
@@ -179,49 +208,36 @@ main {
   .neuf,
   .dix {
     opacity: 0;
-    transition: opacity 3s ease;
   }
   .un {
-    transition-delay: 0s;
+    animation: apparaitre 1.5s ease forwards;
   }
   .deux {
-    transition-delay: 2s;
+    animation: apparaitre 1.5s ease forwards 1s;
   }
   .trois {
-    transition-delay: 4s;
+    animation: apparaitre 1.5s ease forwards 2s;
   }
   .quatre {
-    transition-delay: 6s;
+    animation: apparaitre 1.5s ease forwards 3s;
   }
   .cinq {
-    transition-delay: 8s;
+    animation: apparaitre 1.5s ease forwards 4s;
   }
   .six {
-    transition-delay: 10s;
+    animation: apparaitre 1.5s ease forwards 5s;
   }
   .sept {
-    transition-delay: 12s;
+    animation: apparaitre 1.5s ease forwards 6s;
   }
   .huit {
-    transition-delay: 14s;
+    animation: apparaitre 1.5s ease forwards 7s;
   }
   .neuf {
-    transition-delay: 16s;
+    animation: apparaitre 1.5s ease forwards 8s;
   }
   .dix {
-    transition-delay: 18s;
-  }
-  .declenche:hover .un,
-  .declenche:hover .deux,
-  .declenche:hover .trois,
-  .declenche:hover .quatre,
-  .declenche:hover .cinq,
-  .declenche:hover .six,
-  .declenche:hover .sept,
-  .declenche:hover .huit,
-  .declenche:hover .neuf,
-  .declenche:hover .dix {
-    opacity: 1;
+    animation: apparaitre 1.5s ease forwards 9s;
   }
   .placeBouton {
     display: flex;
@@ -229,27 +245,22 @@ main {
   }
   .placeBouton .btnEntete {
     color: white;
-    background: linear-gradient(to bottom, #FF79DA, #e066b2);
+    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
     padding: 20px 40px;
     border-radius: 39px;
     margin-bottom: 30px;
     margin-top: 30px;
     border: none;
     cursor: pointer;
-    transition: background 300ms ease;
   }
   .btnEntete:hover {
     cursor: pointer;
-    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-    transition: background 0.3s ease;
-  }
-  .btnEntete:hover:hover {
-    background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+    background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
   }
   .footerAccueil {
-    margin-top: 905px;
-    padding: 20px 0;
-    background-color: rgb(64, 63, 63);
+    margin-top: 1060px;
+    padding: 20px 0 20px 5%;
+    background-color: #353535;
     color: white;
   }
   .footerAccueil h3 {
@@ -264,6 +275,9 @@ main {
   }
   .flexIconeTexte {
     margin-bottom: 6px;
+  }
+  .footerPage2 {
+    margin-top: 1120px;
   }
 }
 @media (min-width: 701px) and (max-width: 1600px) {
@@ -281,6 +295,7 @@ main {
     margin-left: 40%;
   }
   .logoFleche i {
+    padding-left: 10px;
     font-size: 150%;
     margin-right: 20px;
     background-color: rgb(242, 237, 237);
@@ -331,7 +346,7 @@ main {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
-    transition: opacity 3s ease;
+    transition: opacity 1500ms ease;
   }
   .coeurVide {
     opacity: 1;
@@ -339,6 +354,7 @@ main {
   }
   .coeurVide:hover {
     opacity: 0;
+    cursor: pointer;
   }
   .coeurPlein {
     opacity: 0;
@@ -346,6 +362,7 @@ main {
   }
   .coeurPlein:hover {
     opacity: 1;
+    cursor: pointer;
   }
   .entreesPlatsDesserts p {
     margin-bottom: 20px;
@@ -359,33 +376,56 @@ main {
   .platCoche {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
-  .platCoche:hover input {
-    transform: translateX(0%);
-    opacity: 1;
+  .platCompo {
+    position: relative;
   }
-  input {
-    height: 19px;
-    width: 19px;
-    margin-left: 10px;
-    transform: translateX(2000%);
+  .coche {
+    border-radius: 0 14px 14px 0;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s, opacity 1s, visibility 1s;
     opacity: 0;
-    transition: transform 2s ease-in-out, opacity 1200ms ease-in-out;
+    visibility: hidden;
+  }
+  .platCompo:hover .coche {
+    transform: scaleX(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .platCompo:hover .ecartPrix {
+    transform: translateX(-35px);
+  }
+  .coche input[type=checkbox] {
+    height: 50%;
+    width: 50%;
   }
   .platCompo {
     margin-bottom: 20px;
-    height: 50px;
+    height: 60px;
     width: 95%;
     margin-left: 7px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: white;
   }
   .platCompo h3 {
+    padding-top: 5px;
     padding-left: 15px;
     text-overflow: ellipsis;
   }
   .ecartPrix {
     padding-right: 10px;
+    transition: transform 1s;
   }
   .assemblage {
     display: flex;
@@ -398,6 +438,14 @@ main {
   .entreesPlatsDesserts .notUnder {
     margin-left: 0px;
   }
+  @keyframes apparaitre {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .un,
   .deux,
   .trois,
@@ -409,49 +457,36 @@ main {
   .neuf,
   .dix {
     opacity: 0;
-    transition: opacity 3s ease;
   }
   .un {
-    transition-delay: 0s;
+    animation: apparaitre 1.5s ease forwards;
   }
   .deux {
-    transition-delay: 2s;
+    animation: apparaitre 1.5s ease forwards 1s;
   }
   .trois {
-    transition-delay: 4s;
+    animation: apparaitre 1.5s ease forwards 2s;
   }
   .quatre {
-    transition-delay: 6s;
+    animation: apparaitre 1.5s ease forwards 3s;
   }
   .cinq {
-    transition-delay: 8s;
+    animation: apparaitre 1.5s ease forwards 4s;
   }
   .six {
-    transition-delay: 10s;
+    animation: apparaitre 1.5s ease forwards 5s;
   }
   .sept {
-    transition-delay: 12s;
+    animation: apparaitre 1.5s ease forwards 6s;
   }
   .huit {
-    transition-delay: 14s;
+    animation: apparaitre 1.5s ease forwards 7s;
   }
   .neuf {
-    transition-delay: 16s;
+    animation: apparaitre 1.5s ease forwards 8s;
   }
   .dix {
-    transition-delay: 18s;
-  }
-  .declenche:hover .un,
-  .declenche:hover .deux,
-  .declenche:hover .trois,
-  .declenche:hover .quatre,
-  .declenche:hover .cinq,
-  .declenche:hover .six,
-  .declenche:hover .sept,
-  .declenche:hover .huit,
-  .declenche:hover .neuf,
-  .declenche:hover .dix {
-    opacity: 1;
+    animation: apparaitre 1.5s ease forwards 9s;
   }
   .compoPrix {
     display: flex;
@@ -474,22 +509,21 @@ main {
     margin-top: 30px;
     border-width: 0;
     cursor: pointer;
-    transition: background 0.3s ease;
   }
   .placeBouton .btnEntete:hover {
     background: linear-gradient(to bottom, #ff8ae0, #842d5d);
   }
   .footerAccueil {
-    margin-top: 905px;
+    margin-top: 997px;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 5%;
-    background-color: rgb(33, 55, 55);
+    background-color: #353535;
     color: white;
   }
   .footerAccueil h3 {
     margin-left: 85%;
-    margin-bottom: -30px;
+    margin-bottom: -10px;
     font-size: 0.8rem;
   }
   .footerAccueil .flexFooterAccueil {
@@ -507,7 +541,7 @@ main {
     font-style: none;
   }
   .footerPage2 {
-    margin-top: 975px;
+    margin-top: 1076px;
   }
   .espaceFlexIcone {
     padding-left: 20px;

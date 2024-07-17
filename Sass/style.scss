@@ -37,8 +37,8 @@ $thirdColor :#f2f2f2;
 
 header{
     padding-bottom : 15px;
-    border-bottom: solid 1px;
     background-color: $secondaryColor;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .entete{
@@ -48,7 +48,7 @@ header{
     align-items : center;
     width : 100%;
     img{
-        height: 20%;
+        height: 15%;
         width : 60%;
         padding-bottom : 7px;
         background-color: white;
@@ -85,7 +85,7 @@ header{
         h1{
             text-align: center;
             @include robotoText();
-            padding-bottom : 3%;
+            padding :3% 10% 3% 10%;
         }
         p{
             text-align: center;
@@ -94,6 +94,7 @@ header{
     }
 
         button{
+            margin : 25px 0;
             color : white;
             border-radius : 39px;
             padding : 20px 40px;
@@ -101,17 +102,16 @@ header{
             color : white;
             background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
             cursor : pointer ;
-            transition: background 0.3s ease;
             &:hover{
                 background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
             }
-        } 
+        }
         
     
     
     //Main//
     .fonctionnement{
-        padding : 20px 5%;
+        padding : 25px 5%;
         display : flex;
         flex-direction : column;
         h2{
@@ -123,7 +123,7 @@ header{
     .etapeNumero{
         display : flex;
         align-items : center;
-        padding: 15px 15px 15px 0;
+        padding: 25px 15px 25px 0;
         margin-bottom: 30px;
         border-radius: 15px;
         background-color: $thirdColor;
@@ -132,6 +132,12 @@ header{
         }
         i{
             margin-right : 10px;
+            color: grey;
+        }
+    }
+
+    .etapeNumero:hover{
+        i{
             color: darkviolet;
         }
     }
@@ -146,12 +152,12 @@ header{
         display : flex;
         justify-content : center;
         align-items : center;
-        margin-left : -5px;
+        margin-left : -8px;
     }
 
     .backgroundResto{
         background-color: $thirdColor;
-        padding : 20px;
+        padding : 25px 20px 25px 20px;
         h2{
             @include robotoText();
             padding-left: 5%;
@@ -254,10 +260,11 @@ header{
 
     .footerAccueil{
         padding-left: 5%;
-        background-color : rgb(64, 63, 63);
+        background-color : #353535;
         color : white;
         h3{
-            padding-top : 6px;
+            padding-top : 10px;
+            font-weight: 400;
         }
         .flexFooterAccueil{
             padding-top: 10px;
@@ -268,6 +275,9 @@ header{
     }
         .flexIconeTexte{
             margin-bottom: 6px;
+            i{
+                margin-right: 4px;
+            }
         } 
 
         
@@ -339,12 +349,15 @@ header{
             animation: roule 7s ease-in;
           }
     }
-     //Mediaquery pour Tablettes //
+     //Mediaquery pour Tablettes et desktop//
     @media (max-width: 1440px) and (min-width: 768px) {
 
         header{
             width : 100%;
             background-color: $secondaryColor;
+        }
+        main, footer{
+            width : 100%;
         }
 
         .entete{
@@ -357,8 +370,8 @@ header{
                 width : 190px;
                 height : 40px;
                 background-color: white;
-                padding: 10px 50% 10px 43%;
-                
+                padding: 10px 0;
+                border : solid 2px;
             }
         }
 
@@ -395,7 +408,6 @@ header{
             border-radius : 39px;
             border-width: 0;
             cursor : pointer ;
-            transition: background 0.3s ease;
             &:hover{
                 background: linear-gradient(to bottom, #ff8ae0, #842d5d);
             }
@@ -428,12 +440,18 @@ header{
             }
             i{
                 margin-right : 10px;
-                color: darkviolet;
+                color: grey;
             }
             span{
                 font-size: 0.8rem;
                 font-weight : bold;
                 padding-right : 8px;
+            }
+        }
+
+        .etapeNumero:hover{
+            i{
+                color : darkviolet;
             }
         }
 
@@ -555,11 +573,11 @@ header{
             padding-top : 30px;
             padding-bottom : 30px;
             padding-left: 5%;
-            background-color : rgb(64, 63, 63);
+            background-color : #353535;
             color : white;
             h3{
                 margin-left : 85%;
-                margin-bottom : -30px;
+                margin-bottom : -10px;
                 font-size : 0.8rem;
             }
             .flexFooterAccueil{
