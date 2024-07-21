@@ -164,7 +164,12 @@ main {
   .platCompo:hover .ecartPrix {
     transform: translateX(-35px);
   }
-  .coche input[type=checkbox] {
+  .platCompo:hover .ellipse {
+    border: solid 2px;
+    flex: 1;
+    padding-right: -35px;
+  }
+  .coche input {
     height: 50%;
     width: 50%;
   }
