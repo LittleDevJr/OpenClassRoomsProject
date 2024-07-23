@@ -234,6 +234,9 @@ span {
   .flexIconeTexte i {
     margin-right: 4px;
   }
+  .flexIconeTexte span:hover {
+    cursor: pointer;
+  }
   @keyframes loaderAnimation {
     0% {
       transform: translateY(0);
@@ -510,6 +513,9 @@ span {
     margin-bottom: 6px;
     margin-left: 10px;
     font-size: 0.8rem;
+  }
+  .flexIconeTexte span:hover {
+    cursor: pointer;
   }
   .espaceFlexIcone {
     padding-left: 25px;

@@ -280,6 +280,10 @@ header{
             }
         } 
 
+        .flexIconeTexte span:hover{
+            cursor : pointer;
+        }
+
         
         @keyframes loaderAnimation {
             0% {
@@ -589,6 +593,9 @@ header{
                 margin-bottom: 6px;
                 margin-left : 10px;
                 font-size : 0.8rem;
+                span:hover{
+                    cursor : pointer;
+                }
             } 
 
             .espaceFlexIcone{

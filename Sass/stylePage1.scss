@@ -151,6 +151,11 @@ $colorPrime: rgb(242, 237, 237);
         padding-right : 10px;
         transition : transform 1s;
     }
+    
+    .reduct{
+        width : 100%;
+        transition : width 1s;
+    }
 
     .assemblage{
         display : flex;
@@ -213,10 +218,9 @@ $colorPrime: rgb(242, 237, 237);
         transform : translateX(-35px);
     }
 
-    .platCompo:hover .ellipse{
-        border : solid 2px;
-        flex: 1;
-        padding-right : -35px;
+    .platCompo:hover .reduct{
+        width : 220px;
+        transition : width 1s;
     }
     
     .coche input {
