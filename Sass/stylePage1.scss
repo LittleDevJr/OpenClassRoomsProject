@@ -120,7 +120,7 @@ $colorPrime: rgb(242, 237, 237);
         position : absolute;
         font-size : 25px;
         margin-top : -5px;
-        transition : opacity 1500ms ease;
+        transition : opacity 500ms ease;
     }
 
     .coeurVide{
@@ -223,9 +223,10 @@ $colorPrime: rgb(242, 237, 237);
         transition : width 1s;
     }
     
-    .coche input {
-        height: 50%;
-        width: 50%;
+    .coche i {
+        color : green;
+        background-color : white;
+        border-radius : 39px;
     }
 
     .platCompo{
@@ -273,35 +274,35 @@ $colorPrime: rgb(242, 237, 237);
         opacity: 0;
         }
     .un{
-        animation : apparaitre 1.5s ease forwards;
+        animation : apparaitre 0.5s ease forwards;
     }
 
     .deux{
-        animation : apparaitre 1.5s ease forwards 1s;
+        animation : apparaitre 0.5s ease forwards 0.5s;
     }
     .trois{
-        animation : apparaitre 1.5s ease forwards 2s;
+        animation : apparaitre 0.5s ease forwards 1s;
     }
     .quatre{
-        animation : apparaitre 1.5s ease forwards 3s;
+        animation : apparaitre 0.5s ease forwards 1.5s;
     }
     .cinq{
-        animation : apparaitre 1.5s ease forwards 4s;
+        animation : apparaitre 0.5s ease forwards 2s;
     }
     .six{
-        animation : apparaitre 1.5s ease forwards 5s;
+        animation : apparaitre 0.5s ease forwards 2.5s;
     }
     .sept{
-        animation : apparaitre 1.5s ease forwards 6s;
+        animation : apparaitre 0.5s ease forwards 3s;
     }
     .huit{
-        animation : apparaitre 1.5s ease forwards 7s;
+        animation : apparaitre 0.5s ease forwards 3.5s;
     }
     .neuf{
-        animation : apparaitre 1.5s ease forwards 8s;
+        animation : apparaitre 0.5s ease forwards 4s;
     }
     .dix{
-        animation : apparaitre 1.5s ease forwards 9s;
+        animation : apparaitre 0.5s ease forwards 4.5s;
     }
     
     .placeBouton{
@@ -425,7 +426,7 @@ $colorPrime: rgb(242, 237, 237);
             position : absolute;
             font-size : 25px;
             margin-top : -5px;
-            transition : opacity 1500ms ease;
+            transition : opacity 500ms ease;
         }
 
         .coeurVide{
@@ -495,10 +496,12 @@ $colorPrime: rgb(242, 237, 237);
             transform : translateX(-35px); 
         }
         
-        .coche input[type="checkbox"] {
-            height: 50%;
-            width: 50%;
+        .coche i {
+            color : green;
+            background-color : white;
+            border-radius : 39px;
         }
+
         .platCompo{
             margin-bottom : 20px;
             height: 60px;
@@ -558,31 +561,31 @@ $colorPrime: rgb(242, 237, 237);
     }
 
     .deux{
-        animation : apparaitre 1.5s ease forwards 1s;
+        animation : apparaitre 0.5s ease forwards 0.5s;
     }
     .trois{
-        animation : apparaitre 1.5s ease forwards 2s;
+        animation : apparaitre 0.5s ease forwards 1s;
     }
     .quatre{
-        animation : apparaitre 1.5s ease forwards 3s;
+        animation : apparaitre 0.5s ease forwards 1.5s;
     }
     .cinq{
-        animation : apparaitre 1.5s ease forwards 4s;
+        animation : apparaitre 0.5s ease forwards 2s;
     }
     .six{
-        animation : apparaitre 1.5s ease forwards 5s;
+        animation : apparaitre 0.5s ease forwards 2.5s;
     }
     .sept{
-        animation : apparaitre 1.5s ease forwards 6s;
+        animation : apparaitre 0.5s ease forwards 3s;
     }
     .huit{
-        animation : apparaitre 1.5s ease forwards 7s;
+        animation : apparaitre 0.5s ease forwards 3.5s;
     }
     .neuf{
-        animation : apparaitre 1.5s ease forwards 8s;
+        animation : apparaitre 0.5s ease forwards 4s;
     }
     .dix{
-        animation : apparaitre 1.5s ease forwards 9s;
+        animation : apparaitre 0.5s ease forwards 4.5s;
     }
    
 
