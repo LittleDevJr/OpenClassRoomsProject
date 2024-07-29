@@ -226,7 +226,6 @@ span {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
   }
   .flexIconeTexte {
     margin-bottom: 6px;
