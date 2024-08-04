@@ -230,6 +230,10 @@ span {
   .flexIconeTexte i {
     margin-right: 4px;
   }
+  .flexIconeTexte span {
+    font-style: none;
+    color: white;
+  }
   .flexIconeTexte span:hover {
     cursor: pointer;
   }
