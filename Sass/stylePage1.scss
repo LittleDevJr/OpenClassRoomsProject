@@ -1,5 +1,6 @@
 //Variables et mixin //
 
+
 $color1 : #d5f0f8;
 $color2 : #c5e2f8;
 $color3 :#89c8fa;
@@ -9,7 +10,7 @@ $color6 : #fcc0ce;
 $colorPrime: rgb(242, 237, 237);
 
 @mixin robotoText{
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 @mixin shirkhandTitle{
@@ -22,6 +23,9 @@ $colorPrime: rgb(242, 237, 237);
         width : 250px;
         margin-bottom : 30px;
     }
+
+    @import 'animationRestaurantPage';
+
 //Global//
     h1,
     h2,
@@ -43,8 +47,13 @@ $colorPrime: rgb(242, 237, 237);
     main{
         background-color : $colorPrime;
     }
+
+    li{
+        list-style-type: none;
+    }
+
 //mediaQuery pour mobile//
-@media (max-width : 700px){
+@media (max-width : 767px){
 
 //Header//
 
@@ -90,7 +99,7 @@ $colorPrime: rgb(242, 237, 237);
         h1{
             margin-bottom : 20px;
             font-style: italic;
-            font-weight: 900;
+            font-weight: 400;
             font-size: x-large;
             padding-left : 10px;
             background-color : $colorPrime;
@@ -108,69 +117,19 @@ $colorPrime: rgb(242, 237, 237);
         }
     }
 
-    .coeur{
-        position : relative;
-        height : 30px;
-        width : 30px;
-        margin-top : -7px;
-        margin-right : 20px;
-    }
-
-    .coeurPlein, .coeurVide{
-        position : absolute;
-        font-size : 25px;
-        margin-top : -5px;
-        transition : opacity 500ms ease;
-    }
-
-    .coeurVide{
-        opacity : 1;
-        color : black;
-        &:hover{
-            opacity : 0;
-            cursor : pointer;
-        }
-    }
-
-    .coeurPlein{
-        opacity : 0;
-        color : purple;
-        &:hover{
-            opacity: 1;
-            cursor: pointer;
-        }
-    }
-
-
     .entreesPlatsDesserts p{
-        margin-bottom : 20px;
         margin-left: 5px;
     }
 
-    .ecartPrix{
-        padding-right : 10px;
-        transition : transform 1s;
-    }
-    
-    .reduct{
-        width : 100%;
-        transition : width 1s;
-    }
-
-    .assemblage{
-        display : flex;
-        align-items: center;
+    .ecartPlat{
         margin-top : 30px;
+        margin-left : 10px;
     }
 
-    .entreesPlatsDesserts .under{
-        border-bottom : solid 1px ;
-        border-color : rgba(153, 244, 192, 0.985);
-    }
-
-    .entreesPlatsDesserts .notUnder{
-        margin-left : 0px;
-        margin-top : -1px;
+    .surligne{
+        margin-top: -10px;
+        color : green;
+        margin-bottom : 20px;
     }
     
     
@@ -184,43 +143,6 @@ $colorPrime: rgb(242, 237, 237);
         display : flex;
         align-items : center;
         justify-content: space-between;
-    }
-
-    .platCompo {
-        position: relative;
-    }
-    
-    .coche {
-        border-radius : 0 14px 14px 0;
-        background-color: green;
-        position: absolute;
-        top: 0;
-        right : 0; 
-        height: 100%;
-        width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform : scaleX(0);
-        transform-origin: right;
-        transition : transform 1s, opacity 1s, visibility 1s;
-        opacity : 0;
-        visibility: hidden;
-    }
-    
-    .platCompo:hover .coche {
-        transform : scaleX(1);
-        opacity : 1;
-        visibility: visible;
-    }
-
-    .platCompo:hover .ecartPrix{
-        transform : translateX(-35px);
-    }
-
-    .platCompo:hover .reduct{
-        width : 220px;
-        transition : width 1s;
     }
     
     .coche i {
@@ -253,58 +175,6 @@ $colorPrime: rgb(242, 237, 237);
         }
     }
 
-    @keyframes apparaitre{
-        0%{
-            opacity : 0;
-        }
-        100%{
-            opacity : 1;
-        }
-    }
-    .un,
-    .deux,
-    .trois,
-    .quatre,
-    .cinq,
-    .six,
-    .sept,
-    .huit,
-    .neuf,
-    .dix{
-        opacity: 0;
-        }
-    .un{
-        animation : apparaitre 0.5s ease forwards;
-    }
-
-    .deux{
-        animation : apparaitre 0.5s ease forwards 0.5s;
-    }
-    .trois{
-        animation : apparaitre 0.5s ease forwards 1s;
-    }
-    .quatre{
-        animation : apparaitre 0.5s ease forwards 1.5s;
-    }
-    .cinq{
-        animation : apparaitre 0.5s ease forwards 2s;
-    }
-    .six{
-        animation : apparaitre 0.5s ease forwards 2.5s;
-    }
-    .sept{
-        animation : apparaitre 0.5s ease forwards 3s;
-    }
-    .huit{
-        animation : apparaitre 0.5s ease forwards 3.5s;
-    }
-    .neuf{
-        animation : apparaitre 0.5s ease forwards 4s;
-    }
-    .dix{
-        animation : apparaitre 0.5s ease forwards 4.5s;
-    }
-    
     .placeBouton{
         display: flex;
         justify-content: center;
@@ -317,11 +187,13 @@ $colorPrime: rgb(242, 237, 237);
         margin-top : 30px;
         border : none;
         cursor : pointer;
+        transition : background 1s ;
     }}
 
     .btnEntete:hover{
         cursor : pointer;
         background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
+        transition : background 1s;
        }
 
     //Footer//
@@ -355,7 +227,7 @@ $colorPrime: rgb(242, 237, 237);
 }
 
 //MediaQuery pour tablettes //
-@media (min-width : 701px) and (max-width : 1600px){
+@media (min-width : 768px){
     .logoFleche{
         display : flex;
         align-items : center;
@@ -399,7 +271,7 @@ $colorPrime: rgb(242, 237, 237);
             h1{
                 margin-bottom : 20px;
                 font-style: italic;
-                font-weight: 900;
+                font-weight: 400;
                 font-size: x-large;
                 background-color : $colorPrime;
                 @include shirkhandTitle();
@@ -415,41 +287,16 @@ $colorPrime: rgb(242, 237, 237);
                 padding-left: 17px;
             }
         }
-        
-        .coeur{
-            position : relative;
-            height : 30px;
-            width : 30px;
-        }
-
-        .coeurPlein, .coeurVide{
-            position : absolute;
-            font-size : 25px;
-            margin-top : -5px;
-            transition : opacity 500ms ease;
-        }
-
-        .coeurVide{
-            opacity : 1;
-            color :black;
-            &:hover{
-                opacity : 0;
-                cursor : pointer;
-            }
-        }
-
-        .coeurPlein{
-            opacity : 0;
-            color : purple;
-            &:hover{
-                opacity: 1;
-                cursor: pointer;
-            }
-        }
 
         .entreesPlatsDesserts p{
             margin-bottom : 20px;
             margin-left: 5px;
+        }
+
+        .surligne{
+            margin-top: -30px;
+            color : green;
+            margin-bottom : 20px;
         }
         
         .ellipse{
@@ -462,38 +309,6 @@ $colorPrime: rgb(242, 237, 237);
             display : flex;
             align-items : center;
             justify-content: space-between;
-        }
-    
-        .platCompo {
-            position: relative;
-        }
-        
-        .coche {
-            border-radius : 0 14px 14px 0;
-            background-color: green;
-            position: absolute;
-            top: 0;
-            right : 0; 
-            height: 100%;
-            width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform : scaleX(0);
-            transform-origin: right;
-            transition : transform 1s, opacity 1s, visibility 1s;
-            opacity : 0;
-            visibility: hidden;
-        }
-        
-        .platCompo:hover .coche {
-            transform : scaleX(1);
-            opacity : 1;
-            visibility: visible;
-        }
-    
-        .platCompo:hover .ecartPrix{
-            transform : translateX(-35px); 
         }
         
         .coche i {
@@ -516,89 +331,21 @@ $colorPrime: rgb(242, 237, 237);
         }
     }
 
-    .ecartPrix{
-        padding-right : 10px;
-        transition : transform 1s;
-    }
-
-    .assemblage{
-        display : flex;
-        align-items: center;
-    }
-
-    .entreesPlatsDesserts .under{
-        border-bottom : solid 1px ;
-        border-color : rgba(153, 244, 192, 0.985);
-    }
-
-    .entreesPlatsDesserts .notUnder{
-        margin-left : 0px;
+    .entreesPlatsDesserts{
+        margin-top: 30px;
     }
 
 
-    @keyframes apparaitre{
-        0%{
-            opacity : 0;
-        }
-        100%{
-            opacity : 1;
-        }
-    }
-    .un,
-    .deux,
-    .trois,
-    .quatre,
-    .cinq,
-    .six,
-    .sept,
-    .huit,
-    .neuf,
-    .dix{
-        opacity: 0;
-        }
-    .un{
-        animation : apparaitre 1.5s ease forwards;
-    }
-
-    .deux{
-        animation : apparaitre 0.5s ease forwards 0.5s;
-    }
-    .trois{
-        animation : apparaitre 0.5s ease forwards 1s;
-    }
-    .quatre{
-        animation : apparaitre 0.5s ease forwards 1.5s;
-    }
-    .cinq{
-        animation : apparaitre 0.5s ease forwards 2s;
-    }
-    .six{
-        animation : apparaitre 0.5s ease forwards 2.5s;
-    }
-    .sept{
-        animation : apparaitre 0.5s ease forwards 3s;
-    }
-    .huit{
-        animation : apparaitre 0.5s ease forwards 3.5s;
-    }
-    .neuf{
-        animation : apparaitre 0.5s ease forwards 4s;
-    }
-    .dix{
-        animation : apparaitre 0.5s ease forwards 4.5s;
-    }
-   
-
-    
         .compoPrix{
             display : flex;
             justify-content: space-between;
             p{
                 margin-left : 15px;
                 padding-bottom : 0px;
-                
+                @include robotoText();
             }
         }
+
         .placeBouton{
             display: flex;
             justify-content: center;
@@ -611,18 +358,17 @@ $colorPrime: rgb(242, 237, 237);
             margin-top : 30px;
             border-width: 0;
             cursor : pointer ;
+            transition : background 1s;
             &:hover{    
             background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+            transition : background 1s;
         
             }
         }}
         //Footer//
     
-       
-
-
         .footerAccueil{
-            margin-top : 997px;
+            margin-top : 1076px;
             padding-top : 30px;
             padding-bottom : 30px;
             padding-left: 5%;
@@ -646,10 +392,11 @@ $colorPrime: rgb(242, 237, 237);
                 span{
                     color: white;
                     font-style : none;
+                    text-decoration: none;
                 }
             } 
             .footerPage2{
-                margin-top: 1076px;
+                margin-top: 1156px;
             }
 
             .espaceFlexIcone{

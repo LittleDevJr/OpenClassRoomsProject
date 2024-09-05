@@ -1,81 +1,4 @@
-h1,
-h2,
-h3 {
-  font-family: "Roboto", sans-serif;
-}
-
-p,
-span {
-  font-family: "Roboto" sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  background-color: rgb(242, 237, 237);
-}
-
-@media (max-width: 700px) {
-  .logoFleche {
-    display: flex;
-    align-items: center;
-    background-color: rgb(242, 237, 237);
-    padding-top: 10px;
-  }
-  .logoFleche img {
-    object-fit: cover;
-    height: 20%;
-    width: 60%;
-    background-color: rgb(242, 237, 237);
-    padding-left: 20%;
-  }
-  .logoFleche i {
-    padding-left: 10px;
-    font-size: 150%;
-    margin-right: 20px;
-    background-color: rgb(242, 237, 237);
-  }
-  .logoFleche i:hover {
-    cursor: pointer;
-  }
-  .photoRestoPage img {
-    height: 200px;
-    width: 100%;
-    margin-top: 15px;
-    position: relative;
-  }
-  .carteMenu {
-    background-color: rgb(242, 237, 237);
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    position: absolute;
-    margin-top: -40px;
-    padding-top: 30px;
-    z-index: 1;
-  }
-  .carteMenu h1 {
-    margin-bottom: 20px;
-    font-style: italic;
-    font-weight: 900;
-    font-size: x-large;
-    padding-left: 10px;
-    background-color: rgb(242, 237, 237);
-    font-family: "Shrikhand", cursive;
-    font-weight: bold;
-  }
-  .restoCoeur {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .restoCoeur i {
-    margin-bottom: 17px;
-    padding-right: 17px;
-  }
+@media (max-width: 767px) {
   .coeur {
     position: relative;
     height: 30px;
@@ -105,9 +28,55 @@ main {
     opacity: 1;
     cursor: pointer;
   }
-  .entreesPlatsDesserts p {
-    margin-bottom: 20px;
-    margin-left: 5px;
+  @keyframes apparaitre {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .coeurPlein .un,
+  .coeurPlein .deux,
+  .coeurPlein .trois,
+  .coeurPlein .quatre,
+  .coeurPlein .cinq,
+  .coeurPlein .six,
+  .coeurPlein .sept,
+  .coeurPlein .huit,
+  .coeurPlein .neuf,
+  .coeurPlein .dix {
+    opacity: 0;
+  }
+  .coeurPlein .un {
+    animation: apparaitre 0.5s ease forwards;
+  }
+  .coeurPlein .deux {
+    animation: apparaitre 0.5s ease forwards 0.5s;
+  }
+  .coeurPlein .trois {
+    animation: apparaitre 0.5s ease forwards 1s;
+  }
+  .coeurPlein .quatre {
+    animation: apparaitre 0.5s ease forwards 1.5s;
+  }
+  .coeurPlein .cinq {
+    animation: apparaitre 0.5s ease forwards 2s;
+  }
+  .coeurPlein .six {
+    animation: apparaitre 0.5s ease forwards 2.5s;
+  }
+  .coeurPlein .sept {
+    animation: apparaitre 0.5s ease forwards 3s;
+  }
+  .coeurPlein .huit {
+    animation: apparaitre 0.5s ease forwards 3.5s;
+  }
+  .coeurPlein .neuf {
+    animation: apparaitre 0.5s ease forwards 4s;
+  }
+  .coeurPlein .dix {
+    animation: apparaitre 0.5s ease forwards 4.5s;
   }
   .ecartPrix {
     padding-right: 10px;
@@ -115,30 +84,7 @@ main {
   }
   .reduct {
     width: 100%;
-    transition: width 1s;
-  }
-  .assemblage {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-  }
-  .entreesPlatsDesserts .under {
-    border-bottom: solid 1px;
-    border-color: rgba(153, 244, 192, 0.985);
-  }
-  .entreesPlatsDesserts .notUnder {
-    margin-left: 0px;
-    margin-top: -1px;
-  }
-  .ellipse {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .platCoche {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    transition: width 1.5s;
   }
   .platCompo {
     position: relative;
@@ -168,184 +114,39 @@ main {
   .platCompo:hover .ecartPrix {
     transform: translateX(-35px);
   }
+}
+@media (max-width: 767px) and (min-width: 461px) {
   .platCompo:hover .reduct {
-    width: 220px;
-    transition: width 1s;
-  }
-  .coche i {
-    color: green;
-    background-color: white;
-    border-radius: 39px;
-  }
-  .platCompo {
-    margin-bottom: 20px;
-    height: 60px;
-    width: 95%;
-    margin-left: 7px;
-    border-radius: 15px;
-    background-color: white;
-  }
-  .platCompo h3 {
-    padding-top: 5px;
-    padding-left: 15px;
-    text-overflow: ellipsis;
-  }
-  .compoPrix {
-    display: flex;
-    justify-content: space-between;
-  }
-  .compoPrix p {
-    margin-left: 15px;
-    padding-bottom: 0px;
-  }
-  @keyframes apparaitre {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .un,
-  .deux,
-  .trois,
-  .quatre,
-  .cinq,
-  .six,
-  .sept,
-  .huit,
-  .neuf,
-  .dix {
-    opacity: 0;
-  }
-  .un {
-    animation: apparaitre 0.5s ease forwards;
-  }
-  .deux {
-    animation: apparaitre 0.5s ease forwards 0.5s;
-  }
-  .trois {
-    animation: apparaitre 0.5s ease forwards 1s;
-  }
-  .quatre {
-    animation: apparaitre 0.5s ease forwards 1.5s;
-  }
-  .cinq {
-    animation: apparaitre 0.5s ease forwards 2s;
-  }
-  .six {
-    animation: apparaitre 0.5s ease forwards 2.5s;
-  }
-  .sept {
-    animation: apparaitre 0.5s ease forwards 3s;
-  }
-  .huit {
-    animation: apparaitre 0.5s ease forwards 3.5s;
-  }
-  .neuf {
-    animation: apparaitre 0.5s ease forwards 4s;
-  }
-  .dix {
-    animation: apparaitre 0.5s ease forwards 4.5s;
-  }
-  .placeBouton {
-    display: flex;
-    justify-content: center;
-  }
-  .placeBouton .btnEntete {
-    color: white;
-    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-    padding: 20px 40px;
-    border-radius: 39px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border: none;
-    cursor: pointer;
-  }
-  .btnEntete:hover {
-    cursor: pointer;
-    background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
-  }
-  .footerAccueil {
-    margin-top: 1060px;
-    padding: 20px 0 20px 5%;
-    background-color: #353535;
-    color: white;
-  }
-  .footerAccueil h3 {
-    margin: 10px 0;
-    font-weight: bold;
-    font-family: "Shrikhand", cursive;
-    font-weight: bold;
-  }
-  .footerAccueil a {
-    text-decoration: none;
-    color: white;
-  }
-  .flexIconeTexte {
-    margin-bottom: 6px;
-  }
-  .footerPage2 {
-    margin-top: 1120px;
+    width: 100%;
   }
 }
-@media (min-width: 701px) and (max-width: 1600px) {
-  .logoFleche {
-    display: flex;
-    align-items: center;
-    background-color: rgb(242, 237, 237);
-    padding-top: 10px;
+@media (max-width: 767px) and (min-width: 431px) and (max-width: 460px) {
+  .platCompo:hover .reduct {
+    width: 310px;
   }
-  .logoFleche img {
-    object-fit: cover;
-    height: 30px;
-    width: 170px;
-    background-color: rgb(242, 237, 237);
-    margin-left: 40%;
+}
+@media (max-width: 767px) and (min-width: 401px) and (max-width: 430px) {
+  .platCompo:hover .reduct {
+    width: 280px;
   }
-  .logoFleche i {
-    padding-left: 10px;
-    font-size: 150%;
-    margin-right: 20px;
-    background-color: rgb(242, 237, 237);
+}
+@media (max-width: 767px) and (min-width: 376px) and (max-width: 400px) {
+  .platCompo:hover .reduct {
+    width: 250px;
   }
-  .photoRestoPage img {
-    height: 200px;
-    width: 100%;
-    margin-top: 15px;
-    position: relative;
-    object-fit: cover;
+}
+@media (max-width: 767px) and (min-width: 350px) and (max-width: 375px) {
+  .platCompo:hover .reduct {
+    width: 230px;
+    transition: width 1s;
   }
-  .carteMenu {
-    padding-left: 7%;
-    padding-right: 7%;
-    background-color: rgb(242, 237, 237);
-    width: 60%;
-    margin: 0 20%;
-    border-radius: 15px 15px 0 0;
-    position: absolute;
-    margin-top: -40px;
-    padding-top: 30px;
-    z-index: 1;
+}
+@media (max-width: 767px) and (min-width: 320px) and (max-width: 350px) {
+  .platCompo:hover .reduct {
+    width: 180px;
   }
-  .carteMenu h1 {
-    margin-bottom: 20px;
-    font-style: italic;
-    font-weight: 900;
-    font-size: x-large;
-    background-color: rgb(242, 237, 237);
-    font-family: "Shrikhand", cursive;
-    font-weight: bold;
-  }
-  .restoCoeur {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .restoCoeur i {
-    margin-bottom: 17px;
-    padding-left: 17px;
-  }
+}
+@media (min-width: 768px) {
   .coeur {
     position: relative;
     height: 30px;
@@ -372,81 +173,6 @@ main {
   .coeurPlein:hover {
     opacity: 1;
     cursor: pointer;
-  }
-  .entreesPlatsDesserts p {
-    margin-bottom: 20px;
-    margin-left: 5px;
-  }
-  .ellipse {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .platCoche {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .platCompo {
-    position: relative;
-  }
-  .coche {
-    border-radius: 0 14px 14px 0;
-    background-color: green;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 1s, opacity 1s, visibility 1s;
-    opacity: 0;
-    visibility: hidden;
-  }
-  .platCompo:hover .coche {
-    transform: scaleX(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  .platCompo:hover .ecartPrix {
-    transform: translateX(-35px);
-  }
-  .coche i {
-    color: green;
-    background-color: white;
-    border-radius: 39px;
-  }
-  .platCompo {
-    margin-bottom: 20px;
-    height: 60px;
-    width: 95%;
-    margin-left: 7px;
-    border-radius: 15px;
-    background-color: white;
-  }
-  .platCompo h3 {
-    padding-top: 5px;
-    padding-left: 15px;
-    text-overflow: ellipsis;
-  }
-  .ecartPrix {
-    padding-right: 10px;
-    transition: transform 1s;
-  }
-  .assemblage {
-    display: flex;
-    align-items: center;
-  }
-  .entreesPlatsDesserts .under {
-    border-bottom: solid 1px;
-    border-color: rgba(153, 244, 192, 0.985);
-  }
-  .entreesPlatsDesserts .notUnder {
-    margin-left: 0px;
   }
   @keyframes apparaitre {
     0% {
@@ -498,6 +224,187 @@ main {
   .dix {
     animation: apparaitre 0.5s ease forwards 4.5s;
   }
+  .platCompo {
+    position: relative;
+  }
+  .coche {
+    border-radius: 0 14px 14px 0;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s, opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .platCompo:hover .coche {
+    transform: scaleX(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .platCompo:hover .ecartPrix {
+    transform: translateX(-35px);
+  }
+  .platCompo:hover .reduct {
+    transition: width 1s;
+  }
+}
+@media (min-width: 768px) and (min-width: 787px) and (max-width: 810px) {
+  .platCompo:hover .reduct {
+    width: 250px;
+    transition: width 1s;
+  }
+}
+@media (min-width: 768px) and (min-width: 811px) and (max-width: 840px) {
+  .platCompo:hover .reduct {
+    width: 270px;
+  }
+}
+@media (min-width: 768px) and (min-width: 841px) and (max-width: 880px) {
+  .platCompo:hover .reduct {
+    width: 280px;
+  }
+}
+@media (min-width: 768px) and (min-width: 881px) and (max-width: 920px) {
+  .platCompo:hover .reduct {
+    width: 290px;
+  }
+}
+@media (min-width: 768px) {
+  .ecartPrix {
+    padding-right: 10px;
+    transition: transform 1s;
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: rgb(242, 237, 237);
+}
+
+li {
+  list-style-type: none;
+}
+
+@media (max-width: 767px) {
+  .logoFleche {
+    display: flex;
+    align-items: center;
+    background-color: rgb(242, 237, 237);
+    padding-top: 10px;
+  }
+  .logoFleche img {
+    object-fit: cover;
+    height: 20%;
+    width: 60%;
+    background-color: rgb(242, 237, 237);
+    padding-left: 20%;
+  }
+  .logoFleche i {
+    padding-left: 10px;
+    font-size: 150%;
+    margin-right: 20px;
+    background-color: rgb(242, 237, 237);
+  }
+  .logoFleche i:hover {
+    cursor: pointer;
+  }
+  .photoRestoPage img {
+    height: 200px;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+  }
+  .carteMenu {
+    background-color: rgb(242, 237, 237);
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    margin-top: -40px;
+    padding-top: 30px;
+    z-index: 1;
+  }
+  .carteMenu h1 {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: x-large;
+    padding-left: 10px;
+    background-color: rgb(242, 237, 237);
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+  }
+  .restoCoeur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .restoCoeur i {
+    margin-bottom: 17px;
+    padding-right: 17px;
+  }
+  .entreesPlatsDesserts p {
+    margin-left: 5px;
+  }
+  .ecartPlat {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .surligne {
+    margin-top: -10px;
+    color: green;
+    margin-bottom: 20px;
+  }
+  .ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .platCoche {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .coche i {
+    color: green;
+    background-color: white;
+    border-radius: 39px;
+  }
+  .platCompo {
+    margin-bottom: 20px;
+    height: 60px;
+    width: 95%;
+    margin-left: 7px;
+    border-radius: 15px;
+    background-color: white;
+  }
+  .platCompo h3 {
+    padding-top: 5px;
+    padding-left: 15px;
+    text-overflow: ellipsis;
+  }
   .compoPrix {
     display: flex;
     justify-content: space-between;
@@ -517,14 +424,165 @@ main {
     border-radius: 39px;
     margin-bottom: 30px;
     margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 1s;
+  }
+  .btnEntete:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
+    transition: background 1s;
+  }
+  .footerAccueil {
+    margin-top: 1060px;
+    padding: 20px 0 20px 5%;
+    background-color: #353535;
+    color: white;
+  }
+  .footerAccueil h3 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+  }
+  .footerAccueil a {
+    text-decoration: none;
+    color: white;
+  }
+  .flexIconeTexte {
+    margin-bottom: 6px;
+  }
+  .footerPage2 {
+    margin-top: 1120px;
+  }
+}
+@media (min-width: 768px) {
+  .logoFleche {
+    display: flex;
+    align-items: center;
+    background-color: rgb(242, 237, 237);
+    padding-top: 10px;
+  }
+  .logoFleche img {
+    object-fit: cover;
+    height: 30px;
+    width: 170px;
+    background-color: rgb(242, 237, 237);
+    margin-left: 40%;
+  }
+  .logoFleche i {
+    padding-left: 10px;
+    font-size: 150%;
+    margin-right: 20px;
+    background-color: rgb(242, 237, 237);
+  }
+  .photoRestoPage img {
+    height: 200px;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    object-fit: cover;
+  }
+  .carteMenu {
+    padding-left: 7%;
+    padding-right: 7%;
+    background-color: rgb(242, 237, 237);
+    width: 60%;
+    margin: 0 20%;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    margin-top: -40px;
+    padding-top: 30px;
+    z-index: 1;
+  }
+  .carteMenu h1 {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: x-large;
+    background-color: rgb(242, 237, 237);
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+  }
+  .restoCoeur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .restoCoeur i {
+    margin-bottom: 17px;
+    padding-left: 17px;
+  }
+  .entreesPlatsDesserts p {
+    margin-bottom: 20px;
+    margin-left: 5px;
+  }
+  .surligne {
+    margin-top: -30px;
+    color: green;
+    margin-bottom: 20px;
+  }
+  .ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .platCoche {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .coche i {
+    color: green;
+    background-color: white;
+    border-radius: 39px;
+  }
+  .platCompo {
+    margin-bottom: 20px;
+    height: 60px;
+    width: 95%;
+    margin-left: 7px;
+    border-radius: 15px;
+    background-color: white;
+  }
+  .platCompo h3 {
+    padding-top: 5px;
+    padding-left: 15px;
+    text-overflow: ellipsis;
+  }
+  .entreesPlatsDesserts {
+    margin-top: 30px;
+  }
+  .compoPrix {
+    display: flex;
+    justify-content: space-between;
+  }
+  .compoPrix p {
+    margin-left: 15px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+  }
+  .placeBouton {
+    display: flex;
+    justify-content: center;
+  }
+  .placeBouton .btnEntete {
+    color: white;
+    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+    padding: 20px 40px;
+    border-radius: 39px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     border-width: 0;
     cursor: pointer;
+    transition: background 1s;
   }
   .placeBouton .btnEntete:hover {
     background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+    transition: background 1s;
   }
   .footerAccueil {
-    margin-top: 997px;
+    margin-top: 1076px;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 5%;
@@ -549,9 +607,10 @@ main {
   .flexIconeTexte span {
     color: white;
     font-style: none;
+    text-decoration: none;
   }
   .footerPage2 {
-    margin-top: 1076px;
+    margin-top: 1156px;
   }
   .espaceFlexIcone {
     padding-left: 20px;

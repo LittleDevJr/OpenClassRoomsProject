@@ -1,3 +1,199 @@
+@media (max-width: 767.98px) {
+  button {
+    margin: 25px 0;
+    border-radius: 39px;
+    padding: 20px 40px;
+    border-width: 0;
+    color: white;
+    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+    cursor: pointer;
+    transition: background 1s;
+  }
+  button:hover {
+    background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
+    transition: background 1s;
+  }
+  .coeur {
+    position: relative;
+    height: 30px;
+    width: 30px;
+  }
+  .coeurPlein, .coeurVide {
+    position: absolute;
+    font-size: 25px;
+    margin-top: -5px;
+    transition: opacity 500ms ease;
+  }
+  .coeurVide {
+    opacity: 1;
+    color: black;
+  }
+  .coeurVide:hover {
+    opacity: 0;
+  }
+  .coeurPlein {
+    opacity: 0;
+    color: rgb(166, 61, 166);
+  }
+  .coeurPlein:hover {
+    opacity: 1;
+  }
+  @keyframes loaderAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(200px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes cacher {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes roule {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    22% {
+      transform: rotate(10800deg);
+    }
+    100% {
+      transform: rotate(108000deg);
+    }
+  }
+  #loader-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+    animation: cacher 1s ease 4s forwards;
+  }
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Shirkhand", cursive;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 40px;
+    animation: loaderAnimation 5s ease-in;
+  }
+  .tourneAnime {
+    animation: roule 7s ease-in;
+  }
+}
+@media (min-width: 768px) {
+  .btnEntete {
+    width: 250px;
+    color: white;
+    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+    padding: 20px 30px;
+    border-radius: 39px;
+    border-width: 0;
+    cursor: pointer;
+    transition: background 1s;
+  }
+  .btnEntete:hover {
+    background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+    transition: background 1s;
+  }
+  .coeur {
+    position: relative;
+    height: 30px;
+    width: 30px;
+  }
+  .coeurPlein, .coeurVide {
+    position: absolute;
+    font-size: 25px;
+    margin-top: -5px;
+    transition: opacity 500ms ease;
+  }
+  .coeurVide {
+    opacity: 1;
+    color: black;
+  }
+  .coeurVide:hover {
+    opacity: 0;
+  }
+  .coeurPlein {
+    opacity: 0;
+    color: rgb(166, 61, 166);
+  }
+  .coeurPlein:hover {
+    opacity: 1;
+  }
+  @keyframes loaderAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    30% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(500%);
+    }
+  }
+  @keyframes cacher {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes roule {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(21600deg);
+    }
+  }
+  #loader-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 9999;
+    animation: cacher 1s ease 4s forwards;
+  }
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Shirkhand", cursive;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 120px;
+    animation: loaderAnimation 5s ease-in;
+  }
+  .tourneAnime {
+    animation: roule 5s ease-in;
+  }
+}
 h1,
 h2,
 h3 {
@@ -66,19 +262,6 @@ span {
     text-align: center;
     padding-bottom: 5%;
   }
-  button {
-    margin: 25px 0;
-    color: white;
-    border-radius: 39px;
-    padding: 20px 40px;
-    border-width: 0;
-    color: white;
-    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-    cursor: pointer;
-  }
-  button:hover {
-    background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
-  }
   .fonctionnement {
     padding: 25px 5%;
     display: flex;
@@ -124,7 +307,6 @@ span {
   }
   .backgroundResto h2 {
     font-family: "Roboto", cursive;
-    padding-left: 5%;
     padding-bottom: 20px;
   }
   .restoConteneur {
@@ -156,31 +338,6 @@ span {
   .restoConteneur .flexRestoConteneur .coeurEloigne p {
     padding-left: 10px;
   }
-  .coeur {
-    position: relative;
-    height: 30px;
-    width: 30px;
-  }
-  .coeurPlein, .coeurVide {
-    position: absolute;
-    font-size: 25px;
-    margin-top: -5px;
-    transition: opacity 500ms ease;
-  }
-  .coeurVide {
-    opacity: 1;
-    color: black;
-  }
-  .coeurVide:hover {
-    opacity: 0;
-  }
-  .coeurPlein {
-    opacity: 0;
-    color: rgb(166, 61, 166);
-  }
-  .coeurPlein:hover {
-    opacity: 1;
-  }
   .etiquetteNouveau {
     position: relative;
     display: inline-block;
@@ -198,10 +355,10 @@ span {
     padding-right: 5px;
     position: absolute;
     border-radius: 5px;
+    font-family: "Roboto", cursive;
   }
   .flexRestoConteneur {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 10px 10px 10% 10%;
@@ -237,68 +394,12 @@ span {
   .flexIconeTexte span:hover {
     cursor: pointer;
   }
-  @keyframes loaderAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(200px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  @keyframes cacher {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  @keyframes roule {
-    0% {
-      transform: rotate(0deg);
-    }
-    20% {
-      transform: rotate(0deg);
-    }
-    22% {
-      transform: rotate(10800deg);
-    }
-    100% {
-      transform: rotate(108000deg);
-    }
-  }
-  #loader-position {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 9999;
-    animation: cacher 1s ease 4s forwards;
-  }
-  .loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Shirkhand", cursive;
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 40px;
-    animation: loaderAnimation 5s ease-in;
-  }
-  .tourneAnime {
-    animation: roule 7s ease-in;
-  }
 }
-@media (max-width: 1500px) and (min-width: 768px) {
+@media (min-width: 768px) {
+  body {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
   header {
     width: 100%;
     background-color: #e7e7e7;
@@ -339,18 +440,6 @@ span {
   }
   .texteBouton p {
     padding-bottom: 15px;
-  }
-  .btnEntete {
-    width: 250px;
-    color: white;
-    background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-    padding: 20px 30px;
-    border-radius: 39px;
-    border-width: 0;
-    cursor: pointer;
-  }
-  .btnEntete:hover {
-    background: linear-gradient(to bottom, #ff8ae0, #842d5d);
   }
   .fonctionnement {
     padding: 20px 5%;
@@ -438,31 +527,6 @@ span {
   .restoConteneur .flexRestoConteneur .coeurEloigne p {
     padding-left: 10px;
   }
-  .restoConteneur .coeur {
-    position: relative;
-    height: 30px;
-    width: 30px;
-  }
-  .restoConteneur .coeurPlein, .restoConteneur .coeurVide {
-    position: absolute;
-    font-size: 25px;
-    margin-top: -5px;
-    transition: opacity 500ms ease;
-  }
-  .restoConteneur .coeurVide {
-    opacity: 1;
-    color: black;
-  }
-  .restoConteneur .coeurVide:hover {
-    opacity: 0;
-  }
-  .restoConteneur .coeurPlein {
-    opacity: 0;
-    color: rgb(166, 61, 166);
-  }
-  .restoConteneur .coeurPlein:hover {
-    opacity: 1;
-  }
   .restoConteneur .etiquetteNouveau {
     position: relative;
     display: inline-block;
@@ -479,6 +543,7 @@ span {
     padding: 5px;
     position: absolute;
     border-radius: 5px;
+    font-family: "Roboto", cursive;
   }
   .flexRestoConteneur {
     width: 40%;
@@ -513,65 +578,16 @@ span {
     margin-left: 10px;
     font-size: 0.8rem;
   }
+  .flexIconeTexte span {
+    font-style: none;
+    color: white;
+    text-decoration: none;
+  }
   .flexIconeTexte span:hover {
     cursor: pointer;
   }
   .espaceFlexIcone {
     padding-left: 25px;
-  }
-  @keyframes loaderAnimation {
-    0% {
-      transform: translateX(0%);
-    }
-    30% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(500%);
-    }
-  }
-  @keyframes cacher {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  @keyframes roule {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(21600deg);
-    }
-  }
-  #loader-position {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 9999;
-    animation: cacher 1s ease 4s forwards;
-  }
-  .loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Shirkhand", cursive;
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 120px;
-    animation: loaderAnimation 5s ease-in;
-  }
-  .tourneAnime {
-    animation: roule 5s ease-in;
   }
 }
 

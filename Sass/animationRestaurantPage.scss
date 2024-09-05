@@ -1,0 +1,292 @@
+//mediaQuery pour mobile//
+@media (max-width : 767px){
+
+    .coeur{
+        position : relative;
+        height  : 30px;
+        width : 30px;
+        margin-top : -7px;
+        margin-right : 20px;
+    }
+
+    .coeurPlein, .coeurVide{
+        position : absolute;
+        font-size : 25px;
+        margin-top : -5px;
+        transition : opacity 500ms ease;
+    }
+
+    .coeurVide{
+        opacity : 1;
+        color : black;
+        &:hover{
+            opacity : 0;
+            cursor : pointer;
+        }
+    }
+
+    .coeurPlein{
+        opacity : 0;
+        color : purple;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        @keyframes apparaitre{
+            0%{
+                opacity : 0;
+            }
+            100%{
+                opacity : 1;
+            }
+        }
+        .un,
+        .deux,
+        .trois,
+        .quatre,
+        .cinq,
+        .six,
+        .sept,
+        .huit,
+        .neuf,
+        .dix{
+            opacity: 0;
+            }
+        .un{
+            animation : apparaitre 0.5s ease forwards;
+        }
+    
+        .deux{
+            animation : apparaitre 0.5s ease forwards 0.5s;
+        }
+        .trois{
+            animation : apparaitre 0.5s ease forwards 1s;
+        }
+        .quatre{
+            animation : apparaitre 0.5s ease forwards 1.5s;
+        }
+        .cinq{
+            animation : apparaitre 0.5s ease forwards 2s;
+        }
+        .six{
+            animation : apparaitre 0.5s ease forwards 2.5s;
+        }
+        .sept{
+            animation : apparaitre 0.5s ease forwards 3s;
+        }
+        .huit{
+            animation : apparaitre 0.5s ease forwards 3.5s;
+        }
+        .neuf{
+            animation : apparaitre 0.5s ease forwards 4s;
+        }
+        .dix{
+            animation : apparaitre 0.5s ease forwards 4.5s;
+        }
+    }
+
+    .ecartPrix{
+        padding-right : 10px;
+        transition : transform 1s;
+    }
+    
+    .reduct{
+        width : 100%;
+        transition : width 1.5s;
+    }
+
+    .platCompo {
+        position: relative;
+    }
+    
+    .coche {
+        border-radius : 0 14px 14px 0;
+        background-color: green;
+        position: absolute;
+        top: 0;
+        right : 0; 
+        height: 100%;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform : scaleX(0);
+        transform-origin: right;
+        transition : transform 1s, opacity 1s, visibility 1s;
+        opacity : 0;
+        visibility: hidden;
+    }
+    
+    .platCompo:hover .coche {
+        transform : scaleX(1);
+        opacity : 1;
+        visibility: visible;
+    }
+
+    .platCompo:hover .ecartPrix{
+        transform : translateX(-35px);
+    }
+
+    .platCompo:hover .reduct{
+        @media (min-width: 461px){
+            width: 100%;
+        }
+        @media (min-width: 431px) and (max-width: 460px){
+            width : 310px;
+        }
+        @media (min-width: 401px) and (max-width: 430px){
+            width : 280px;
+        }
+        @media (min-width: 376px) and (max-width: 400px){
+            width : 250px;
+        }
+        @media (min-width: 350px) and (max-width: 375px) {
+        width : 230px;
+        transition : width 1s;
+    }
+    @media (min-width: 320px) and (max-width: 350px) {
+        width: 180px;
+    }}
+}
+
+//MediaQuery pour tablettes //
+@media (min-width : 768px){
+
+    .coeur{
+        position : relative;
+        height : 30px;
+        width : 30px;
+    }
+
+    .coeurPlein, .coeurVide{
+        position : absolute;
+        font-size : 25px;
+        margin-top : -5px;
+        transition : opacity 500ms ease;
+    }
+
+    .coeurVide{
+        opacity : 1;
+        color :black;
+        &:hover{
+            opacity : 0;
+            cursor : pointer;
+        }
+    }
+
+    .coeurPlein{
+        opacity : 0;
+        color : purple;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    @keyframes apparaitre{
+        0%{
+            opacity : 0;
+        }
+        100%{
+            opacity : 1;
+        }
+    }
+    .un,
+    .deux,
+    .trois,
+    .quatre,
+    .cinq,
+    .six,
+    .sept,
+    .huit,
+    .neuf,
+    .dix{
+        opacity: 0;
+        }
+    .un{
+        animation : apparaitre 1.5s ease forwards;
+    }
+
+    .deux{
+        animation : apparaitre 0.5s ease forwards 0.5s;
+    }
+    .trois{
+        animation : apparaitre 0.5s ease forwards 1s;
+    }
+    .quatre{
+        animation : apparaitre 0.5s ease forwards 1.5s;
+    }
+    .cinq{
+        animation : apparaitre 0.5s ease forwards 2s;
+    }
+    .six{
+        animation : apparaitre 0.5s ease forwards 2.5s;
+    }
+    .sept{
+        animation : apparaitre 0.5s ease forwards 3s;
+    }
+    .huit{
+        animation : apparaitre 0.5s ease forwards 3.5s;
+    }
+    .neuf{
+        animation : apparaitre 0.5s ease forwards 4s;
+    }
+    .dix{
+        animation : apparaitre 0.5s ease forwards 4.5s;
+    }
+
+    .platCompo {
+        position: relative;
+    }
+    
+    .coche {
+        border-radius : 0 14px 14px 0;
+        background-color: green;
+        position: absolute;
+        top: 0;
+        right : 0; 
+        height: 100%;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform : scaleX(0);
+        transform-origin: right;
+        transition : transform 1s, opacity 1s, visibility 1s;
+        opacity : 0;
+        visibility: hidden;
+    }
+    
+    .platCompo:hover .coche {
+        transform : scaleX(1);
+        opacity : 1;
+        visibility: visible;
+    }
+
+    .platCompo:hover .ecartPrix{
+        transform : translateX(-35px); 
+    }
+
+    .platCompo:hover .reduct{
+        transition: width 1s;
+        @media (min-width: 787px) and (max-width: 810px){
+            width: 250px;
+            transition: width 1s;
+        }
+        @media (min-width: 811px) and (max-width: 840px){
+            width: 260px;
+        }
+        @media (min-width: 841px) and (max-width: 880px){
+            width: 280px;
+        }
+        @media (min-width: 881px) and (max-width: 920px){
+            width: 290px;
+        }
+    }
+
+    .ecartPrix{
+        padding-right : 10px;
+        transition : transform 1s;
+    }
+}

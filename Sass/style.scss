@@ -1,4 +1,4 @@
-//Variables et mixin //
+//Variables et mixin 
 
 $primaryColor : rgb(32, 31, 31);
 $secondaryColor : #e7e7e7;
@@ -12,7 +12,8 @@ $thirdColor :#f2f2f2;
     font-family : 'Shrikhand', cursive;
     }
 
-    
+    @import 'animationMainPage';
+
 //Global//
     h1,
     h2,
@@ -29,6 +30,8 @@ $thirdColor :#f2f2f2;
         padding: 0;
         margin: 0;
     }
+
+   
     
     //mediaQuery pour mobile//
     @media (max-width : 767.98px){
@@ -88,23 +91,7 @@ header{
             text-align: center;
             padding-bottom: 5%;
         }
-    }
-
-        button{
-            margin : 25px 0;
-            color : white;
-            border-radius : 39px;
-            padding : 20px 40px;
-            border-width: 0;
-            color : white;
-            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-            cursor : pointer ;
-            &:hover{
-                background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
-            }
-        }
-        
-    
+    }    
     
     //Main//
     .fonctionnement{
@@ -157,7 +144,6 @@ header{
         padding : 25px 20px 25px 20px;
         h2{
             @include robotoText();
-            padding-left: 5%;
             padding-bottom : 20px;
         }
     }
@@ -193,35 +179,6 @@ header{
         }
     }
 
-    .coeur{
-        position : relative;
-        height : 30px;
-        width : 30px;
-    }
-
-    .coeurPlein, .coeurVide{
-        position : absolute;
-        font-size : 25px;
-        margin-top : -5px;
-        transition : opacity 500ms ease;
-    }
-
-    .coeurVide{
-        opacity : 1;
-        color : black;
-        &:hover{
-            opacity : 0;
-        }
-    }
-
-    .coeurPlein{
-        opacity : 0;
-        color : rgb(166, 61, 166);
-        &:hover{
-            opacity: 1;
-        }
-    }
-    
     .etiquetteNouveau{
         position: relative;
         display: inline-block;
@@ -239,11 +196,11 @@ header{
         padding-right: 5px;
         position : absolute;
         border-radius : 5px;
+        @include robotoText();
     }
 
     .flexRestoConteneur{
-        width: 90%;
-        margin-left : 5%;
+        width: 100%;
         margin-bottom: 20px;
         background-color: white;
         border-radius : 10px 10px 10% 10%;
@@ -283,78 +240,15 @@ header{
         .flexIconeTexte span:hover{
             cursor : pointer;
         }
-
-        
-        @keyframes loaderAnimation {
-            0% {
-              transform: translateY(0);
-            }
-            30% {
-                transform: translateY(200px);
-            }
-            100% {
-              transform:  translateY(0px);
-            }
-          }
-          
-          @keyframes cacher {
-            0% {
-              opacity: 1;
-            }
-            100% {
-              opacity: 0;
-              visibility: hidden;
-            }
-          }
-          
-          @keyframes roule {
-            0% {
-              transform: rotate(0deg);
-            }
-            20% {
-                transform: rotate(0deg);
-            }
-            22% {
-                transform : rotate(10800deg);
-            }
-            100% {
-              transform: rotate(108000deg); 
-            }
-          }
-          
-    
-          
-          #loader-position {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            z-index: 9999;
-            animation: cacher 1s ease 4s forwards;
-          }
-          
-          .loader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Shirkhand', cursive;
-            font-weight: bolder;
-            font-style: italic;
-            font-size: 40px;
-            animation: loaderAnimation 5s ease-in;
-          }
-          
-          .tourneAnime {
-            animation: roule 7s ease-in;
-          }
     }
+
      //Mediaquery pour Tablettes et desktop//
-    @media (max-width: 1500px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+
+        body{
+            max-width: 1080px;
+            margin: 0 auto;
+        }
 
         header{
             width : 100%;
@@ -401,22 +295,8 @@ header{
             }
         }
 
-        .btnEntete{
-            width : 250px;
-            color : white;
-            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-            padding : 20px 30px;
-            border-radius : 39px;
-            border-width: 0;
-            cursor : pointer ;
-            &:hover{
-                background: linear-gradient(to bottom, #ff8ae0, #842d5d);
-            }
-        }
-
         .fonctionnement{
             padding: 20px 5%;
-            
             h2{
                 @include robotoText();
                 padding-bottom: 10px;
@@ -511,35 +391,6 @@ header{
                     }
                 }
 
-                .coeur{
-                    position : relative;
-                    height : 30px;
-                    width : 30px;
-                }
-        
-                .coeurPlein, .coeurVide{
-                    position : absolute;
-                    font-size : 25px;
-                    margin-top : -5px;
-                    transition : opacity 500ms ease;
-                }
-        
-                .coeurVide{
-                    opacity : 1;
-                    color : black;
-                    &:hover{
-                        opacity : 0;
-                    }
-                }
-        
-                .coeurPlein{
-                    opacity : 0;
-                    color : rgb(166, 61, 166);
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
-
                 .etiquetteNouveau{
                     position: relative;
                     display: inline-block;
@@ -556,6 +407,7 @@ header{
                     padding : 5px;
                     position : absolute;
                     border-radius : 5px;
+                    @include robotoText();
                 }
             }
             .flexRestoConteneur{ 
@@ -591,6 +443,11 @@ header{
                 margin-bottom: 6px;
                 margin-left : 10px;
                 font-size : 0.8rem;
+                span{
+                    font-style : none;
+                    color : white;
+                    text-decoration: none;
+                }
                 span:hover{
                     cursor : pointer;
                 }
@@ -599,76 +456,6 @@ header{
             .espaceFlexIcone{
                 padding-left: 25px;
             }
-        
-
-        
-            @keyframes loaderAnimation {
-                0% {
-                  transform: translateX(0%);
-                }
-                30%{
-                    transform : translateX(0%)
-                }
-                100% {
-                  transform:  translateX(500%);
-                }
-              }
-              
-              @keyframes cacher {
-                0% {
-                  opacity: 1;
-                }
-                100% {
-                  opacity: 0;
-                  visibility: hidden;
-                }
-              }
-              
-              @keyframes roule {
-                0% {
-                  transform: rotate(0deg);
-                }
-                100% {
-                  transform: rotate(21600deg); 
-                }
-              }
-              
-        
-              
-              #loader-position {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: white;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                z-index: 9999;
-                animation: cacher 1s ease 4s forwards;
-              }
-              
-              .loader {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: 'Shirkhand', cursive;
-                font-weight: bolder;
-                font-style: italic;
-                font-size: 120px;
-                animation: loaderAnimation 5s ease-in;
-              }
-              
-              .tourneAnime {
-                animation: roule 5s ease-in;
-              }
-            
-        
-
-        
-
-    
 }
 
 
