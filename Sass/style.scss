@@ -4,460 +4,502 @@ $primaryColor : rgb(32, 31, 31);
 $secondaryColor : #e7e7e7;
 $thirdColor :#f2f2f2;
 
-@mixin robotoText{
+@mixin robotoText {
     font-family: 'Roboto', cursive;
 }
 
-@mixin shirkhandTitle{
-    font-family : 'Shrikhand', cursive;
-    }
+@mixin shirkhandTitle {
+    font-family: 'Shrikhand', cursive;
+}
 
-    @import 'animationMainPage';
+@import 'animationMainPage';
 
 //Global//
-    h1,
-    h2,
-    h3{
-        @include shirkhandTitle();
-    }
-
-    p,
-    span{
-        @include robotoText();
-    }
-
-    *{
-        padding: 0;
-        margin: 0;
-    }
-
-   
-    
-    //mediaQuery pour mobile//
-    @media (max-width : 767.98px){
-    
-//header//
-
-header{
-    padding-bottom : 15px;
-    background-color: $secondaryColor;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+h1,
+h2,
+h3 {
+    @include shirkhandTitle();
 }
 
-.entete{
-    display : flex;
-    flex-direction : column;
-    justify-content : space-between;
-    align-items : center;
-    width : 100%;
-    background-color : white;
+p,
+span {
+    @include robotoText();
 }
 
-    .rechercheEntete{
-        display : inline;
-        background-color : $secondaryColor;
-        width : 100%;
-        padding : 15px 0;
-        i{
-            margin-left : 27%;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+//mediaQuery pour mobile//
+@media (max-width : 767.98px) {
+
+    //header//
+
+    header {
+        padding-bottom: 15px;
+        background-color: $secondaryColor;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .entete {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+    }
+
+    .rechercheEntete {
+        display: inline;
+        background-color: $secondaryColor;
+        width: 100%;
+        padding: 15px 0;
+
+        i {
+            margin-left: 27%;
         }
-        input{
-            background-color : $secondaryColor;
-            border : none;
-            &::placeholder{
+
+        input {
+            background-color: $secondaryColor;
+            border: none;
+
+            &::placeholder {
                 font-weight: bold;
-                color : black;
-                border : none;
-                background-color : $secondaryColor;
+                color: black;
+                border: none;
+                background-color: $secondaryColor;
                 margin-left: 20px;
             }
         }
-    }      
+    }
 
-    .texteBouton{
-        padding-top : 5%;
+    .texteBouton {
+        padding-top: 5%;
         padding-bottom: 20px;
-        display : flex;
-        flex-direction : column;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: $thirdColor;
-        h1{
+
+        h1 {
             text-align: center;
             @include robotoText();
-            padding :3% 10% 3% 10%;
+            padding: 3% 10% 3% 10%;
         }
-        p{
+
+        p {
             text-align: center;
             padding-bottom: 5%;
         }
-    }    
-    
+    }
+
     //Main//
-    .fonctionnement{
-        padding : 25px 5%;
-        display : flex;
-        flex-direction : column;
-        h2{
+    .fonctionnement {
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
             @include robotoText();
             margin-bottom: 30px;
         }
     }
 
-    .etapeNumero{
-        display : flex;
-        align-items : center;
+    .etapeNumero {
+        display: flex;
+        align-items: center;
         padding: 25px 15px 25px 0;
         margin-bottom: 30px;
         border-radius: 15px;
         background-color: $thirdColor;
-        p{
-            margin-right : 10px;
+
+        p {
+            margin-right: 10px;
         }
-        i{
-            margin-right : 10px;
+
+        i {
+            margin-right: 10px;
             color: grey;
         }
     }
 
-    .etapeNumero:hover{
-        i{
+    .etapeNumero:hover {
+        i {
             color: darkviolet;
         }
     }
 
-    .numeroStyle{
-        width : 20px;
-        height : 20px;
-        font-size : 12px;
-        border-radius : 50%;
-        background-color : darkviolet;
-        color : white;
-        display : flex;
-        justify-content : center;
-        align-items : center;
-        margin-left : -8px;
+    .numeroStyle {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 50%;
+        background-color: darkviolet;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -8px;
     }
 
-    .backgroundResto{
+    .backgroundResto {
         background-color: $thirdColor;
-        padding : 25px 20px 25px 20px;
-        h2{
+        padding: 25px 20px 25px 20px;
+
+        h2 {
             @include robotoText();
-            padding-bottom : 20px;
+            padding-bottom: 20px;
         }
     }
 
-    .restoConteneur{
+    .restoConteneur {
         margin-top: 15px;
-        display : flex;
-        flex-direction : column ;
-        .flexRestoConteneur{
+        display: flex;
+        flex-direction: column;
+
+        .flexRestoConteneur {
             padding-bottom: 10px;
-            display : flex;
-            flex-direction : column;
-            img{
-                border-radius : 10px 10px 0% 0%;
-                height : 150px;
-                width : 100%;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                border-radius: 10px 10px 0% 0%;
+                height: 150px;
+                width: 100%;
                 object-fit: cover;
             }
-            h3{
+
+            h3 {
                 @include robotoText();
-                padding-left : 10px;
+                padding-left: 10px;
             }
-            
-            .coeurEloigne{
-                display : flex;
-                align-items : center;
-                justify-content : space-between;
-                margin-top : 0;
-                p{
-                    padding-left : 10px;
+
+            .coeurEloigne {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 0;
+
+                p {
+                    padding-left: 10px;
                 }
             }
         }
     }
 
-    .etiquetteNouveau{
+    .etiquetteNouveau {
         position: relative;
         display: inline-block;
     }
-    .etiquetteNouveau::after{
+
+    .etiquetteNouveau::after {
         content: "Nouveau";
         width: 63px;
         height: 20px;
         color: rgb(17, 133, 92);
         background-color: rgba(153, 244, 192, 0.985);
-        right : 5%;
+        right: 5%;
         bottom: 80%;
         display: block;
         padding-left: 5px;
         padding-right: 5px;
-        position : absolute;
-        border-radius : 5px;
+        position: absolute;
+        border-radius: 5px;
         @include robotoText();
     }
 
-    .flexRestoConteneur{
+    .flexRestoConteneur {
         width: 100%;
         margin-bottom: 20px;
         background-color: white;
-        border-radius : 10px 10px 10% 10%;
-        a{
-        text-decoration: none;
-        color : black;
+        border-radius: 10px 10px 10% 10%;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
-}
 
     //Footer//
 
-    .footerAccueil{
+    .footerAccueil {
         padding-left: 5%;
-        background-color : #353535;
-        color : white;
-        h3{
-            padding-top : 10px;
+        background-color: #353535;
+        color: white;
+
+        h3 {
+            padding-top: 10px;
             font-weight: 400;
         }
-        .flexFooterAccueil{
+
+        .flexFooterAccueil {
             padding-top: 10px;
-            display : flex;
-            flex-direction : column;
-        }
-    }
-        .flexIconeTexte{
-            margin-bottom: 6px;
-            i{
-                margin-right: 4px;
-            }
-            span{
-                font-style : none;
-                color : white;
-            }
-        } 
-
-        .flexIconeTexte span:hover{
-            cursor : pointer;
+            display: flex;
+            flex-direction: column;
         }
     }
 
-     //Mediaquery pour Tablettes et desktop//
-    @media (min-width: 768px) {
+    .flexIconeTexte {
+        margin-bottom: 6px;
 
-        body{
-            max-width: 1080px;
-            margin: 0 auto;
+        i {
+            margin-right: 4px;
         }
 
-        header{
-            width : 100%;
-            background-color: $secondaryColor;
+        span {
+            font-style: none;
+            color: white;
         }
-        main, footer{
-            width : 100%;
-        }
+    }
 
-        .entete{
-            text-align: center;
-            width: 100%;
-            background-color : white;
-            form{
-                padding : 15px 50px;
-            }
-        }
-
-        .rechercheEntete{
-            width : 100%;
-            background-color : $secondaryColor;
-            input{
-            background-color : $secondaryColor;
-            border : none;
-            padding-left : 30px;
-            &::placeholder{
-                font-weight: bold;
-                color : black;
-            }
-            }}
-        
-
-        .texteBouton{
-            width : 100%;
-            background-color: $thirdColor;
-            text-align: center;
-            padding : 10px 0 20px 0;
-            h1{
-                padding-bottom: 25px;
-                @include robotoText();
-            }
-            p{
-                padding-bottom: 15px;
-            }
-        }
-
-        .fonctionnement{
-            padding: 20px 5%;
-            h2{
-                @include robotoText();
-                padding-bottom: 10px;
-            }     
-        }
-
-        .etapeFonctionnement{
-            display : flex;
-            justify-content : space-between;
-        }
-
-        .etapeNumero{
-            display : flex;
-            align-items : center;
-            padding: 15px 15px 15px 0px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            background-color: $thirdColor;
-            p{
-                margin-right : 15px;
-                margin-left : -5px;
-            }
-            i{
-                margin-right : 10px;
-                color: grey;
-            }
-            span{
-                font-size: 0.8rem;
-                font-weight : bold;
-                padding-right : 8px;
-            }
-        }
-
-        .etapeNumero:hover{
-            i{
-                color : darkviolet;
-            }
-        }
-
-        .numeroStyle{
-            width : 20px;
-            height : 20px;
-            font-size : 12px;
-            border-radius : 50%;
-            background-color : darkviolet;
-            color : white;
-            display : flex;
-            justify-content : center;
-            align-items : center;
-        }
-    
-        .backgroundResto{
-            background-color: $thirdColor;
-            padding-bottom: 30px;
-            margin-top: 30px;
-            h2{
-                @include robotoText();
-                padding-left: 5%;
-                padding-bottom : 20px;
-            }}
-        
-            
-        
-            .restoConteneur{
-                margin-top: 15px;
-                display : flex;
-                flex-wrap: wrap;
-                .flexRestoConteneur{
-                    padding-bottom: 15px;
-                    margin-right : 25px;
-                    display : flex;
-                    flex-direction : column;
-                    img{
-                        border-radius : 10px 10px 0% 0%;
-                        height : 150px;
-                        width : 100%;
-                        object-fit: cover;
-                    }
-                    h3{
-                        @include robotoText();
-                        padding-left : 10px;
-                    }
-                    
-                    .coeurEloigne{
-                        display : flex;
-                        align-items : center;
-                        justify-content : space-between;
-                        margin-top : 0;
-                        p{
-                            padding-left : 10px;
-                        }
-                    }
-                }
-
-                .etiquetteNouveau{
-                    position: relative;
-                    display: inline-block;
-                }
-                .etiquetteNouveau::after{
-                    content: "Nouveau";
-                    width: 63px;
-                    height: 20px;
-                    color: rgb(17, 133, 92);
-                    background-color: rgba(153, 244, 192, 0.985);
-                    right : 5%;
-                    bottom: 75%;
-                    display: block;
-                    padding : 5px;
-                    position : absolute;
-                    border-radius : 5px;
-                    @include robotoText();
-                }
-            }
-            .flexRestoConteneur{ 
-                width : 40%;
-                margin-left : 5%;
-                margin-bottom: 20px;
-                background-color: white;
-                border-radius : 10% 10% 10% 10%;
-                a{
-                text-decoration: none;
-                color : black;
-            }
-        }
-
-        .footerAccueil{
-            padding-top : 30px;
-            padding-bottom : 30px;
-            padding-left: 5%;
-            background-color : #353535;
-            color : white;
-            h3{
-                margin-left : 85%;
-                margin-bottom : -10px;
-                font-size : 0.8rem;
-            }
-            .flexFooterAccueil{
-                padding-top: 10px;
-                display : flex;
-                justify-content : center;
-            }
-        }
-            .flexIconeTexte{
-                margin-bottom: 6px;
-                margin-left : 10px;
-                font-size : 0.8rem;
-                span{
-                    font-style : none;
-                    color : white;
-                    text-decoration: none;
-                }
-                span:hover{
-                    cursor : pointer;
-                }
-            } 
-
-            .espaceFlexIcone{
-                padding-left: 25px;
-            }
+    .flexIconeTexte span:hover {
+        cursor: pointer;
+    }
 }
 
+//Mediaquery pour Tablettes et desktop//
+@media (min-width: 768px) {
+
+    body {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    header {
+        width: 100%;
+        background-color: $secondaryColor;
+    }
+
+    main,
+    footer {
+        width: 100%;
+    }
+
+    .entete {
+        text-align: center;
+        width: 100%;
+        background-color: white;
+
+        form {
+            padding: 15px 50px;
+        }
+    }
+
+    .rechercheEntete {
+        width: 100%;
+        background-color: $secondaryColor;
+
+        input {
+            background-color: $secondaryColor;
+            border: none;
+            padding-left: 30px;
+
+            &::placeholder {
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
+
+
+    .texteBouton {
+        width: 100%;
+        background-color: $thirdColor;
+        text-align: center;
+        padding: 10px 0 20px 0;
+
+        h1 {
+            padding-bottom: 25px;
+            @include robotoText();
+        }
+
+        p {
+            padding-bottom: 15px;
+        }
+    }
+
+    .fonctionnement {
+        padding: 20px 5%;
+
+        h2 {
+            @include robotoText();
+            padding-bottom: 10px;
+        }
+    }
+
+    .etapeFonctionnement {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .etapeNumero {
+        display: flex;
+        align-items: center;
+        padding: 15px 15px 15px 0px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        background-color: $thirdColor;
+
+        p {
+            margin-right: 15px;
+            margin-left: -5px;
+        }
+
+        i {
+            margin-right: 10px;
+            color: grey;
+        }
+
+        span {
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding-right: 8px;
+        }
+    }
+
+    .etapeNumero:hover {
+        i {
+            color: darkviolet;
+        }
+    }
+
+    .numeroStyle {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 50%;
+        background-color: darkviolet;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backgroundResto {
+        background-color: $thirdColor;
+        padding-bottom: 30px;
+        margin-top: 30px;
+
+        h2 {
+            @include robotoText();
+            padding-left: 5%;
+            padding-bottom: 20px;
+        }
+    }
 
 
 
+    .restoConteneur {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .flexRestoConteneur {
+            padding-bottom: 15px;
+            margin-right: 25px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                border-radius: 10px 10px 0% 0%;
+                height: 150px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h3 {
+                @include robotoText();
+                padding-left: 10px;
+            }
+
+            .coeurEloigne {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 0;
+
+                p {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .etiquetteNouveau {
+            position: relative;
+            display: inline-block;
+        }
+
+        .etiquetteNouveau::after {
+            content: "Nouveau";
+            width: 63px;
+            height: 20px;
+            color: rgb(17, 133, 92);
+            background-color: rgba(153, 244, 192, 0.985);
+            right: 5%;
+            bottom: 75%;
+            display: block;
+            padding: 5px;
+            position: absolute;
+            border-radius: 5px;
+            @include robotoText();
+        }
+    }
+
+    .flexRestoConteneur {
+        width: 40%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 10% 10% 10% 10%;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .footerAccueil {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 5%;
+        background-color: #353535;
+        color: white;
+
+        h3 {
+            margin-left: 85%;
+            margin-bottom: -10px;
+            font-size: 0.8rem;
+        }
+
+        .flexFooterAccueil {
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .flexIconeTexte {
+        margin-bottom: 6px;
+        margin-left: 10px;
+        font-size: 0.8rem;
+
+        span {
+            font-style: none;
+            color: white;
+            text-decoration: none;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+    }
+
+    .espaceFlexIcone {
+        padding-left: 25px;
+    }
+}

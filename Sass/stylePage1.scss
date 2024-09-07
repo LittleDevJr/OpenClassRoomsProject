@@ -9,397 +9,428 @@ $color5 :#99e2d0;
 $color6 : #fcc0ce;
 $colorPrime: rgb(242, 237, 237);
 
-@mixin robotoText{
+@mixin robotoText {
     font-family: 'Roboto', sans-serif;
 }
 
-@mixin shirkhandTitle{
-    font-family : 'Shrikhand', cursive;
+@mixin shirkhandTitle {
+    font-family: 'Shrikhand', cursive;
     font-weight: bold;
-    }
+}
 
-    @mixin structureImage{
-        height : 80px;
-        width : 250px;
-        margin-bottom : 30px;
-    }
+@mixin structureImage {
+    height: 80px;
+    width: 250px;
+    margin-bottom: 30px;
+}
 
-    @import 'animationRestaurantPage';
+@import 'animationRestaurantPage';
 
 //Global//
-    h1,
-    h2,
-    h3{
-        font-family: 'Roboto', sans-serif;
-    }
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
 
-    p,
-    span{
-        @include robotoText();
-    }
+p,
+span {
+    @include robotoText();
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    main{
-        background-color : $colorPrime;
-    }
+main {
+    background-color: $colorPrime;
+}
 
-    li{
-        list-style-type: none;
-    }
+li {
+    list-style-type: none;
+}
+
+.fleche{
+    color: black;
+}
 
 //mediaQuery pour mobile//
-@media (max-width : 767px){
+@media (max-width : 767px) {
 
-//Header//
+    //Header//
 
-.logoFleche{
-    display : flex;
-    align-items : center;
-    background-color : $colorPrime;
-    padding-top: 10px;
-    img{
-        object-fit: cover;
-        height : 20%;
-        width : 60%;
-        background-color : $colorPrime;
-        padding-left: 20%;
-    }
-    i{
-        padding-left : 10px;
-        font-size : 150%;
-        margin-right : 20px;
+    .logoFleche {
+        display: flex;
+        align-items: center;
         background-color: $colorPrime;
-        &:hover{
-            cursor:pointer;
+        padding-top: 10px;
+
+        img {
+            object-fit: cover;
+            height: 20%;
+            width: 60%;
+            background-color: $colorPrime;
+            padding-left: 20%;
+        }
+
+        i {
+            padding-left: 10px;
+            font-size: 150%;
+            margin-right: 20px;
+            background-color: $colorPrime;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
-}
-   //Main//
 
-    .photoRestoPage img{  
-        height : 200px;
-        width : 100%;
-        margin-top : 15px;
-        position : relative;
+    //Main//
+
+    .photoRestoPage img {
+        height: 200px;
+        width: 100%;
+        margin-top: 15px;
+        position: relative;
     }
 
-    .carteMenu{
-        background-color : $colorPrime;
-        width : 100%;
-        border-radius : 15px 15px 0 0;
-        position : absolute ;
-        margin-top : -40px;
+    .carteMenu {
+        background-color: $colorPrime;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        position: absolute;
+        margin-top: -40px;
         padding-top: 30px;
         z-index: 1;
-        h1{
-            margin-bottom : 20px;
+
+        h1 {
+            margin-bottom: 20px;
             font-style: italic;
             font-weight: 400;
             font-size: x-large;
-            padding-left : 10px;
-            background-color : $colorPrime;
+            padding-left: 10px;
+            background-color: $colorPrime;
             @include shirkhandTitle();
         }
     }
-    
-    .restoCoeur{
-        display : flex;
+
+    .restoCoeur {
+        display: flex;
         align-items: center;
         justify-content: space-between;
-        i{
+
+        i {
             margin-bottom: 17px;
-            padding-right: 17px;  
+            padding-right: 17px;
         }
     }
 
-    .entreesPlatsDesserts p{
+    .entreesPlatsDesserts p {
         margin-left: 5px;
     }
 
-    .ecartPlat{
-        margin-top : 30px;
-        margin-left : 10px;
+    .ecartPlat {
+        margin-top: 30px;
+        margin-left: 10px;
     }
 
-    .surligne{
+    .surligne {
         margin-top: -10px;
-        color : green;
-        margin-bottom : 20px;
+        color: green;
+        margin-bottom: 20px;
     }
-    
-    
-    .ellipse{
-        overflow:hidden;
+
+
+    .ellipse {
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    .platCoche{
-        display : flex;
-        align-items : center;
+    .platCoche {
+        display: flex;
+        align-items: center;
         justify-content: space-between;
     }
-    
+
     .coche i {
-        color : green;
-        background-color : white;
-        border-radius : 39px;
+        color: green;
+        background-color: white;
+        border-radius: 39px;
     }
 
-    .platCompo{
-        margin-bottom : 20px;
+    .platCompo {
+        margin-bottom: 20px;
         height: 60px;
-        width : 95%;
+        width: 95%;
         margin-left: 7px;
-        border-radius : 15px;
-        background-color : white;
-         h3{
-            padding-top : 5px;
-        padding-left : 15px;
-        text-overflow: ellipsis;
-    }
-}
+        border-radius: 15px;
+        background-color: white;
 
-    .compoPrix{
-        display : flex;
-        justify-content: space-between;
-        p{
-            margin-left : 15px;
-            padding-bottom : 0px;
-            
+        h3 {
+            padding-top: 5px;
+            padding-left: 15px;
+            text-overflow: ellipsis;
         }
     }
 
-    .placeBouton{
+    .compoPrix {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin-left: 15px;
+            padding-bottom: 0px;
+
+        }
+    }
+
+    .placeBouton {
         display: flex;
         justify-content: center;
-    .btnEntete{
-        color : white;
-        background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-        padding : 20px 40px;
-        border-radius : 39px;
-        margin-bottom: 30px;
-        margin-top : 30px;
-        border : none;
-        cursor : pointer;
-        transition : background 1s ;
-    }}
 
-    .btnEntete:hover{
-        cursor : pointer;
+        .btnEntete {
+            color: white;
+            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+            padding: 20px 40px;
+            border-radius: 39px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background 1s;
+        }
+    }
+
+    .btnEntete:hover {
+        cursor: pointer;
         background: linear-gradient(to bottom, #ff8ae0, #cc5c99);
-        transition : background 1s;
-       }
+        transition: background 1s;
+    }
 
     //Footer//
 
-    .footerAccueil{
-        margin-top : 1060px;
-        padding : 20px 0 20px 5%;
+    .footerAccueil {
+        margin-top: 1060px;
+        padding: 20px 0 20px 5%;
         background-color: #353535;
-        color : white;
-        h3{
-            margin:10px 0;
-            font-weight : bold;
+        color: white;
+
+        h3 {
+            margin: 10px 0;
+            font-weight: bold;
             @include shirkhandTitle();
         }
     }
 
-    .footerAccueil a{
-        text-decoration : none;
-        color : white;
+    .footerAccueil a {
+        text-decoration: none;
+        color: white;
     }
 
-    .flexIconeTexte{
-        margin-bottom : 6px;
+    .flexIconeTexte {
+        margin-bottom: 6px;
     }
 
-    .footerPage2{
-        margin-top : 1120px;
+    .footerPage2 {
+        margin-top: 1120px;
     }
 
-    
+
 }
 
 //MediaQuery pour tablettes //
-@media (min-width : 768px){
-    .logoFleche{
-        display : flex;
-        align-items : center;
-        background-color : $colorPrime;
+@media (min-width : 768px) {
+    .logoFleche {
+        display: flex;
+        align-items: center;
+        background-color: $colorPrime;
         padding-top: 10px;
-        img{
+
+        img {
             object-fit: cover;
-            height : 30px;
-            width : 170px;
-            background-color : $colorPrime;
-            margin-left : 40%;
+            height: 30px;
+            width: 170px;
+            background-color: $colorPrime;
+            margin-left: 40%;
         }
-        i{
-            padding-left : 10px;
-            font-size : 150%;
-            margin-right : 20px;
+
+        i {
+            padding-left: 10px;
+            font-size: 150%;
+            margin-right: 20px;
             background-color: $colorPrime;
         }
     }
-       //Main//
-    
-        .photoRestoPage img{  
-            height : 200px;
-            width : 100%;
-            margin-top : 15px;
-            position : relative;
-            object-fit: cover;
-        }
-    
-        .carteMenu{
-            padding-left : 7%;
-            padding-right : 7%;
-            background-color : $colorPrime;
-            width : 60%;
-            margin: 0 20%;
-            border-radius : 15px 15px 0 0;
-            position : absolute ;
-            margin-top : -40px;
-            padding-top: 30px;
-            z-index: 1;
-            h1{
-                margin-bottom : 20px;
-                font-style: italic;
-                font-weight: 400;
-                font-size: x-large;
-                background-color : $colorPrime;
-                @include shirkhandTitle();
-            }
-        }
-        
-        .restoCoeur{
-            display : flex;
-            align-items: center;
-            justify-content: center;
-            i{
-                margin-bottom: 17px;
-                padding-left: 17px;
-            }
-        }
 
-        .entreesPlatsDesserts p{
-            margin-bottom : 20px;
-            margin-left: 5px;
-        }
+    //Main//
 
-        .surligne{
-            margin-top: -30px;
-            color : green;
-            margin-bottom : 20px;
-        }
-        
-        .ellipse{
-            overflow:hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        
-        .platCoche{
-            display : flex;
-            align-items : center;
-            justify-content: space-between;
-        }
-        
-        .coche i {
-            color : green;
-            background-color : white;
-            border-radius : 39px;
-        }
+    .photoRestoPage img {
+        height: 200px;
+        width: 100%;
+        margin-top: 15px;
+        position: relative;
+        object-fit: cover;
+    }
 
-        .platCompo{
-            margin-bottom : 20px;
-            height: 60px;
-            width : 95%;
-            margin-left: 7px;
-            border-radius : 15px;
-            background-color : white;
-             h3{
-                padding-top : 5px;
-            padding-left : 15px;
+    .carteMenu {
+        padding-left: 7%;
+        padding-right: 7%;
+        background-color: $colorPrime;
+        width: 60%;
+        margin: 0 20%;
+        border-radius: 15px 15px 0 0;
+        position: absolute;
+        margin-top: -40px;
+        padding-top: 30px;
+        z-index: 1;
+
+        h1 {
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: 400;
+            font-size: x-large;
+            background-color: $colorPrime;
+            @include shirkhandTitle();
+        }
+    }
+
+    .restoCoeur {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            margin-bottom: 17px;
+            padding-left: 17px;
+        }
+    }
+
+    .entreesPlatsDesserts p {
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+
+    .surligne {
+        margin-top: -30px;
+        color: green;
+        margin-bottom: 20px;
+    }
+
+    .ellipse {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .platCoche {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .coche i {
+        color: green;
+        background-color: white;
+        border-radius: 39px;
+    }
+
+    .platCompo {
+        margin-bottom: 20px;
+        height: 60px;
+        width: 95%;
+        margin-left: 7px;
+        border-radius: 15px;
+        background-color: white;
+
+        h3 {
+            padding-top: 5px;
+            padding-left: 15px;
             text-overflow: ellipsis;
         }
     }
 
-    .entreesPlatsDesserts{
+    .entreesPlatsDesserts {
         margin-top: 30px;
     }
 
 
-        .compoPrix{
-            display : flex;
-            justify-content: space-between;
-            p{
-                margin-left : 15px;
-                padding-bottom : 0px;
-                @include robotoText();
+    .compoPrix {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin-left: 15px;
+            padding-bottom: 0px;
+            @include robotoText();
+        }
+    }
+
+    .placeBouton {
+        display: flex;
+        justify-content: center;
+
+        .btnEntete {
+            color: white;
+            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
+            padding: 20px 40px;
+            border-radius: 39px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            border-width: 0;
+            cursor: pointer;
+            transition: background 1s;
+
+            &:hover {
+                background: linear-gradient(to bottom, #ff8ae0, #842d5d);
+                transition: background 1s;
+
             }
         }
+    }
 
-        .placeBouton{
+    //Footer//
+
+    .footerAccueil {
+        margin-top: 1076px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 5%;
+        background-color: #353535;
+        color: white;
+
+        h3 {
+            margin-left: 85%;
+            margin-bottom: -10px;
+            font-size: 0.8rem;
+        }
+
+        .flexFooterAccueil {
+            padding-top: 10px;
             display: flex;
             justify-content: center;
-        .btnEntete{
-            color : white;
-            background: linear-gradient(to bottom, rgb(249, 90, 249), rgb(166, 61, 166));
-            padding : 20px 40px;
-            border-radius : 39px;
-            margin-bottom: 30px;
-            margin-top : 30px;
-            border-width: 0;
-            cursor : pointer ;
-            transition : background 1s;
-            &:hover{    
-            background: linear-gradient(to bottom, #ff8ae0, #842d5d);
-            transition : background 1s;
-        
-            }
-        }}
-        //Footer//
-    
-        .footerAccueil{
-            margin-top : 1076px;
-            padding-top : 30px;
-            padding-bottom : 30px;
-            padding-left: 5%;
-            background-color :   #353535;
-            color : white;
-            h3{
-                margin-left : 85%;
-                margin-bottom : -10px;
-                font-size : 0.8rem;
-            }
-            .flexFooterAccueil{
-                padding-top: 10px;
-                display : flex;
-                justify-content : center;
-            } 
         }
-            .flexIconeTexte{
-                margin-bottom: 6px;
-                margin-left : 10px;
-                font-size : 0.8rem;
-                span{
-                    color: white;
-                    font-style : none;
-                    text-decoration: none;
-                }
-            } 
-            .footerPage2{
-                margin-top: 1156px;
-            }
-
-            .espaceFlexIcone{
-                padding-left : 20px;
-            }
     }
+
+    .flexIconeTexte {
+        margin-bottom: 6px;
+        margin-left: 10px;
+        font-size: 0.8rem;
+
+        span {
+            color: white;
+            font-style: none;
+            text-decoration: none;
+        }
+    }
+
+    .footerPage2 {
+        margin-top: 1156px;
+    }
+
+    .espaceFlexIcone {
+        padding-left: 20px;
+    }
+}

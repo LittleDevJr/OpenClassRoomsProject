@@ -18,7 +18,8 @@
     height: 30px;
     width: 30px;
   }
-  .coeurPlein, .coeurVide {
+  .coeurPlein,
+  .coeurVide {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
@@ -119,7 +120,8 @@
     height: 30px;
     width: 30px;
   }
-  .coeurPlein, .coeurVide {
+  .coeurPlein,
+  .coeurVide {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
@@ -404,7 +406,8 @@ span {
     width: 100%;
     background-color: #e7e7e7;
   }
-  main, footer {
+  main,
+  footer {
     width: 100%;
   }
   .entete {

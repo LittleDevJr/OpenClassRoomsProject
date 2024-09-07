@@ -6,7 +6,8 @@
     margin-top: -7px;
     margin-right: 20px;
   }
-  .coeurPlein, .coeurVide {
+  .coeurPlein,
+  .coeurVide {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
@@ -152,7 +153,8 @@
     height: 30px;
     width: 30px;
   }
-  .coeurPlein, .coeurVide {
+  .coeurPlein,
+  .coeurVide {
     position: absolute;
     font-size: 25px;
     margin-top: -5px;
@@ -252,11 +254,15 @@
   .platCompo:hover .ecartPrix {
     transform: translateX(-35px);
   }
+  .reduct {
+    width: 100%;
+    transition: width 1500ms;
+  }
   .platCompo:hover .reduct {
     transition: width 1s;
   }
 }
-@media (min-width: 768px) and (min-width: 787px) and (max-width: 810px) {
+@media (min-width: 768px) and (min-width: 767px) and (max-width: 810px) {
   .platCompo:hover .reduct {
     width: 250px;
     transition: width 1s;
@@ -264,7 +270,7 @@
 }
 @media (min-width: 768px) and (min-width: 811px) and (max-width: 840px) {
   .platCompo:hover .reduct {
-    width: 270px;
+    width: 260px;
   }
 }
 @media (min-width: 768px) and (min-width: 841px) and (max-width: 880px) {
@@ -306,6 +312,10 @@ main {
 
 li {
   list-style-type: none;
+}
+
+.fleche {
+  color: black;
 }
 
 @media (max-width: 767px) {
