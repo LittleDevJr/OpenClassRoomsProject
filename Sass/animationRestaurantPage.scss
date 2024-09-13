@@ -35,17 +35,19 @@
             opacity: 1;
             cursor: pointer;
         }
+    }
+    
 
         @keyframes apparaitre {
             0% {
                 opacity: 0;
             }
-
+    
             100% {
                 opacity: 1;
             }
         }
-
+    
         .un,
         .deux,
         .trois,
@@ -58,47 +60,46 @@
         .dix {
             opacity: 0;
         }
-
+    
         .un {
-            animation: apparaitre 0.5s ease forwards;
+            animation: apparaitre 1.5s ease forwards;
         }
-
+    
         .deux {
             animation: apparaitre 0.5s ease forwards 0.5s;
         }
-
+    
         .trois {
             animation: apparaitre 0.5s ease forwards 1s;
         }
-
+    
         .quatre {
             animation: apparaitre 0.5s ease forwards 1.5s;
         }
-
+    
         .cinq {
             animation: apparaitre 0.5s ease forwards 2s;
         }
-
+    
         .six {
             animation: apparaitre 0.5s ease forwards 2.5s;
         }
-
+    
         .sept {
             animation: apparaitre 0.5s ease forwards 3s;
         }
-
+    
         .huit {
             animation: apparaitre 0.5s ease forwards 3.5s;
         }
-
+    
         .neuf {
             animation: apparaitre 0.5s ease forwards 4s;
         }
-
+    
         .dix {
             animation: apparaitre 0.5s ease forwards 4.5s;
         }
-    }
 
     .ecartPrix {
         padding-right: 10px;

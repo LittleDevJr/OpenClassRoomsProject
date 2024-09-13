@@ -37,46 +37,46 @@
       opacity: 1;
     }
   }
-  .coeurPlein .un,
-  .coeurPlein .deux,
-  .coeurPlein .trois,
-  .coeurPlein .quatre,
-  .coeurPlein .cinq,
-  .coeurPlein .six,
-  .coeurPlein .sept,
-  .coeurPlein .huit,
-  .coeurPlein .neuf,
-  .coeurPlein .dix {
+  .un,
+  .deux,
+  .trois,
+  .quatre,
+  .cinq,
+  .six,
+  .sept,
+  .huit,
+  .neuf,
+  .dix {
     opacity: 0;
   }
-  .coeurPlein .un {
-    animation: apparaitre 0.5s ease forwards;
+  .un {
+    animation: apparaitre 1.5s ease forwards;
   }
-  .coeurPlein .deux {
+  .deux {
     animation: apparaitre 0.5s ease forwards 0.5s;
   }
-  .coeurPlein .trois {
+  .trois {
     animation: apparaitre 0.5s ease forwards 1s;
   }
-  .coeurPlein .quatre {
+  .quatre {
     animation: apparaitre 0.5s ease forwards 1.5s;
   }
-  .coeurPlein .cinq {
+  .cinq {
     animation: apparaitre 0.5s ease forwards 2s;
   }
-  .coeurPlein .six {
+  .six {
     animation: apparaitre 0.5s ease forwards 2.5s;
   }
-  .coeurPlein .sept {
+  .sept {
     animation: apparaitre 0.5s ease forwards 3s;
   }
-  .coeurPlein .huit {
+  .huit {
     animation: apparaitre 0.5s ease forwards 3.5s;
   }
-  .coeurPlein .neuf {
+  .neuf {
     animation: apparaitre 0.5s ease forwards 4s;
   }
-  .coeurPlein .dix {
+  .dix {
     animation: apparaitre 0.5s ease forwards 4.5s;
   }
   .ecartPrix {
@@ -616,7 +616,6 @@ li {
   }
   .flexIconeTexte span {
     color: white;
-    font-style: none;
     text-decoration: none;
   }
   .footerPage2 {

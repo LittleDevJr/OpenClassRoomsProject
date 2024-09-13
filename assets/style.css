@@ -390,8 +390,8 @@ span {
     margin-right: 4px;
   }
   .flexIconeTexte span {
-    font-style: none;
     color: white;
+    text-decoration: none;
   }
   .flexIconeTexte span:hover {
     cursor: pointer;
@@ -582,7 +582,6 @@ span {
     font-size: 0.8rem;
   }
   .flexIconeTexte span {
-    font-style: none;
     color: white;
     text-decoration: none;
   }
